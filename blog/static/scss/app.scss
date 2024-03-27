@@ -1,0 +1,98 @@
+/*---------------------------------------------
+Template Name: Blogxpress
+Template URL: https://new.axilthemes.com/demo/template/blogxpress/
+Description: Blog and News HTML Template
+Author: Axilthemes
+Author URL: https://axilthemes.com/
+Version: 1.0.1
+
+===============================================   
+STYLESHEET INDEXING
+|
+|___Default Styles
+|	|___ Variables
+|	|___ Typography
+|	|___ Global
+|	|___ Classes
+|	|___ Animation 
+|
+|___Elements Styles
+|	|___ Back To Top
+|	|___ Breadcrumb
+|	|___ Button 
+|	|___ Slick 
+|
+|___Template Styles
+|	|___ 404 Error
+|	|___ About
+|	|___ Author
+|	|___ Category
+|	|___ Contact
+|	|___ FAQ
+|	|___ Hero
+|	|___ Search
+|	|___ Newsletter
+|	|___ Post
+|	|___ Sidebar
+|	|___ Single Post
+|   |___ Team
+|
+|___Header Styles
+|	|___ Header
+|	|___ Mobile Menu
+|   |___ Topbar
+|
+|___Footer Styles
+|   |___Footer
+|   |___Instagram
+|   
+|___ END STYLESHEET INDEXING
+
+--------------------------------------------*/
+
+/*=======================================================================
+1. Default Styles
+=========================================================================*/
+@import "default/variable";
+@import "default/typography";
+@import "default/global";
+@import "default/classes";
+@import "default/animation";
+
+/*=======================================================================
+2. Element Styles
+=========================================================================*/
+@import "elements/back-top";
+@import "elements/breadcrumb";
+@import "elements/button";
+@import "elements/slick";
+@import "elements/preloader";
+
+/*=======================================================================
+3. Template Styles
+=========================================================================*/
+@import "sections/404";
+@import "sections/about";
+@import "sections/author";
+@import "sections/category";
+@import "sections/contact";
+@import "sections/faq";
+@import "sections/hero";
+@import "sections/newsletter";
+@import "sections/post";
+@import "sections/sidebar";
+@import "sections/single-post";
+@import "sections/team";
+
+/*=======================================================================
+4.Header Styles 
+=========================================================================*/
+@import "header/header";
+@import "header/mobile-menu";
+@import "header/topbar";
+
+/*=======================================================================
+5.Footer Styles 
+=========================================================================*/
+@import "footer/footer";
+@import "footer/instagram";

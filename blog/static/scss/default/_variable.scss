@@ -1,0 +1,364 @@
+/*-------------------------
+    Variables
+-------------------------*/
+:root body.active-dark-mode {
+    // Dark Mode Color
+    --color-body: #c1c6c9;
+    --color-black: #ffffff;
+    --color-black-rgb: 255, 255, 255;
+    --color-white: #000000;
+    --color-white-rgb: 0, 0, 0;
+    --color-light-1: #2E2E2E;
+    --color-light-2: #4E4E4E;
+    --color-light-3: #434343;
+    --color-dark-1: #ffffff;
+    --color-bg-light-1: #212121;
+    --color-bg-light-2: #1c1c1c;
+    --color-bg-light-3: #2E2E2E;
+    --color-heading-1: #4E4E4E;
+    --color-heading-2: #4E4E4E;
+
+    // Template Color
+    --color-menu: #dddddd;
+    --color-sub-menu: #dddddd;
+    --color-meta-dark-1: #929292;
+    --color-category-dark-1: #a4a4a4;
+    --color-border-dark-1: #5c5c5c;
+    --color-border-dark-2: #424242;
+    --color-border-light-1: #DDE0E4;
+}
+
+:root {
+    // Light Mode Color
+    --color-body: #494e51;
+    --color-body-fixed: #494e51;
+    --color-black: #000000;
+    --color-black-fixed: #000000;
+    --color-black-rgb: 0, 0, 0;
+    --color-black-rgb-fixed: 0, 0, 0;
+    --color-white: #ffffff;
+    --color-white-fixed: #ffffff;
+    --color-white-rgb: 255, 255, 255;
+    --color-white-rgb-fixed: 255, 255, 255;
+    --color-light-1: #ffffff;
+    --color-light-1-fixed: #ffffff;
+    --color-light-2: #F5F5F5;
+    --color-light-2-fixed: #F5F5F5;
+    --color-light-3: #D6D6D6;
+    --color-light-3-fixed: #D6D6D6;    
+    --color-dark-1: #2E2E2E;
+    --color-dark-1-fixed: #2E2E2E;
+    --color-bg-light-1: #ffffff;
+    --color-bg-light-2: #F8F8F5;
+    --color-bg-light-3: #ffffff;
+    --color-heading-1: #8FF6B8;
+    --color-heading-2: #FDE8E8;
+    
+    // Template Color
+    --color-primary: #F75959;
+    --color-primary-rgb: 247, 89, 89;
+    --color-menu: #4E4E4E;
+    --color-menu-fixed: #4E4E4E;
+    --color-sub-menu: #4E4E4E;
+    --color-sub-menu-fixed: #4E4E4E;
+    --color-meta-dark-1: #6b7074;
+    --color-meta-dark-1-fixed: #6b7074;
+    --color-meta-light-1-fixed: #d3d7da;
+    --color-category-dark-1: #606468;
+    --color-category-dark-1-fixed: #606468;
+    --color-category-light-1-fixed: #dbe0e3;
+    --color-border-dark-1: #303030;
+    --color-border-dark-1-fixed: #303030;
+    --color-border-dark-2: #DDE0E4;
+    --color-border-dark-2-fixed: #DDE0E4;
+    --color-border-light-1: #424242;
+    --color-border-light-1-fixed: #424242;
+    
+    // Multi Color
+    --color-scandal: #C5FBE1;
+    --color-mimosa: #F0FDCD;
+    --color-selago: #F1D1FC;
+    --color-selago-smooth: #F9EAFE;
+    --color-old-lace: #FDEDDD;
+    --color-tidal: #E6FDA8;
+    --color-perano: #B4AAF3;
+    --color-aquamarine: #8FF6B8;
+    --color-polar: #D8F6F4;
+    --color-atomic-tangerine: #FBA574;
+    --color-screamin-green: #7AF189;
+    --color-btn-bg: #A4F4F9;
+    --color-medium-purple: #8C52D6;
+    --color-ecru-white: #F9F8F0;
+    --color-woodsmoke: #121418;
+    --color-tundora: #4E4E4E;
+    --color-shamrock: #4ADE80;
+    
+    // Social Color
+    --facebook: #337FFF;
+    --instagram: #d62976;
+    --twitter: #33CCFF;
+    --pinterest: #FF0000;
+    --linkedin: #0072b1;
+    --vimeo: #1AB7EA;
+    --tiktok: #000000;
+    --youtube: #FF0000;
+    --dribbble: #444444;
+    --mail-fast: #776CF2;   
+
+    // Font Family
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Poppins', sans-serif;
+    --font-icomoon: 'icomoon' !important;
+
+    // Transition
+    --transition: all 0.3s ease-in-out;
+    --transition-menu: all 0.4s cubic-bezier(.30,.02,0,.60);
+    --transition-slider: 1s cubic-bezier(0.45, 0.05, 0.15, 0.93) 0.15s;
+    --transition-figure: all 0.5s cubic-bezier(0.23, 0.03, 0, 1.08);
+
+    // Template Style
+    --radius-default: 8px;
+    --font-size-menu: 16px;
+    --font-size-sub-menu: 15px;
+    --font-weight-menu: 500;
+    --font-weight-sub-menu: 500;
+
+    // Body Font Size
+    --size-b1: 24px;
+
+    @media (max-width: 767px) {
+        --size-b1: 22px;
+    }
+
+    --size-b2: 20px;
+
+    @media (max-width: 767px) {
+        --size-b2: 18px;
+    }
+
+    --size-b3: 18px;
+
+    @media (max-width: 767px) {
+        --size-b3: 17px;
+    }
+
+    --size-b4: 17px;
+
+    @media (max-width: 767px) {
+        --size-b4: 17px;
+    }
+
+    --size-b5: 16px;
+    --size-b6: 15px;
+    --size-b7: 14px;
+
+    // Heading Font Size
+    --h1-large: 64px;
+
+    @media (max-width: 991px) {
+        --h1-large: 56px;
+    }
+
+    @media (max-width: 767px) {
+        --h1-large: 40px;
+    }
+
+    @media (max-width: 575px) {
+        --h1-large: 36px;
+    }
+
+    --h1: 40px;
+
+    @media (max-width: 991px) {
+        --h1: 36px;
+    }
+
+    @media (max-width: 767px) {
+        --h1: 32px;
+    }
+
+    @media (max-width: 575px) {
+        --h1: 28px;
+    }
+
+    --h2-large: 40px;
+
+    @media (max-width: 991px) {
+        --h2-large: 36px;
+    }
+
+    @media (max-width: 767px) {
+        --h2-large: 32px;
+    }
+
+    @media (max-width: 575px) {
+        --h2-large: 28px;
+    }
+
+    --h2: 36px;
+
+    @media (max-width: 991px) {
+        --h2: 32px;
+    }
+
+    @media (max-width: 767px) {
+        --h2: 28px;
+    }
+
+    @media (max-width: 575px) {
+        --h2: 26px;
+    }
+
+    --h2-medium: 24px;
+
+    @media (max-width: 991px) {
+        --h2-medium: 22px;
+    }
+
+    @media (max-width: 767px) {
+        --h2-medium: 20px;
+    }
+
+    @media (max-width: 575px) {
+        --h2-medium: 18px;
+    }
+
+    --h2-small: 20px;
+
+    @media (max-width: 767px) {
+        --h2-small: 18px;
+    }
+
+    @media (max-width: 575px) {
+        --h2-small: 17px;
+    }
+
+    --h3-extra-large: 36px;
+
+    @media (max-width: 991px) {
+        --h3-extra-large: 32px;
+    }
+
+    @media (max-width: 767px) {
+        --h3-extra-large: 28px;
+    }
+
+    @media (max-width: 575px) {
+        --h3-extra-large: 26px;
+    }
+
+    --h3-large: 28px;
+
+    @media (max-width: 991px) {
+        --h3-large: 26px;
+    }
+
+    @media (max-width: 767px) {
+        --h3-large: 22px;
+    }
+
+    @media (max-width: 575px) {
+        --h3-large: 20px;
+    }
+
+    --h3-regular: 24px;
+
+    @media (max-width: 767px) {
+        --h3-regular: 22px;
+    }
+
+    @media (max-width: 575px) {
+        --h3-regular: 20px;
+    }
+
+    --h3: 22px;
+
+    @media (max-width: 767px) {
+        --h3: 20px;
+    }
+
+    @media (max-width: 575px) {
+        --h3: 18px;
+    }
+
+    --h3-medium: 20px;
+
+    @media (max-width: 767px) {
+        --h3-medium: 18px;
+    }
+
+    @media (max-width: 575px) {
+        --h3-medium: 17px;
+    }
+
+    --h3-small: 18px;
+
+    @media (max-width: 767px) {
+        --h3-small: 17px;
+    }
+
+    @media (max-width: 575px) {
+        --h3-small: 16px;
+    }
+
+    --h3-extra-small: 16px;
+
+    @media (max-width: 767px) {
+        --h3-extra-small: 15px;
+    }
+
+    @media (max-width: 575px) {
+        --h3-extra-small: 14px;
+    }
+
+    --h4-large: 24px;
+
+    @media (max-width: 767px) {
+        --h4-large: 22px;
+    }
+
+    @media (max-width: 575px) {
+        --h4-large: 20px;
+    }
+
+    --h4: 20px;
+
+    @media (max-width: 767px) {
+        --h4: 18px;
+    }
+
+    @media (max-width: 575px) {
+        --h4: 16px;
+    }
+
+    --h4-small: 18px;
+
+    @media (max-width: 767px) {
+        --h4-small: 16px;
+    }
+
+    @media (max-width: 575px) {
+        --h4-small: 15px;
+    }
+
+    .g-1, .gy-1 {
+        --bs-gutter-y: 10px;
+        --bs-gutter-x: 10px;
+    }
+    .g-2, .gy-2 {
+        --bs-gutter-y: 20px;
+        --bs-gutter-x: 20px;
+    }
+    .g-3, .gy-3 {
+        --bs-gutter-y: 30px;
+        --bs-gutter-x: 30px;
+    }
+    .g-4, .gy-4 {
+        --bs-gutter-y: 40px;
+        --bs-gutter-x: 40px;
+    }
+    .g-5, .gy-5 {
+        --bs-gutter-y: 50px;
+        --bs-gutter-x: 50px;
+    }  
+}

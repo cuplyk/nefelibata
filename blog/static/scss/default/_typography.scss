@@ -1,0 +1,165 @@
+/*-------------------------
+    Typography
+-------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+body {
+    font-family: var(--font-primary);
+    font-size: var(--size-b5);
+    line-height: 1.55;
+    color: var(--color-body);
+    font-weight: 400;
+    height: 100%;
+    vertical-align: baseline;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+p {
+    font-size: var(--size-b5);
+    line-height: 1.67;
+    margin: 0 0 20px 0;
+    color: var(--color-body);
+    transition: var(--transition);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+address,
+p,
+pre,
+blockquote,
+table,
+hr {
+    margin: 0 0 20px 0;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    color: var(--color-dark-1);
+    transition: var(--transition);
+}
+
+h1.h1-large {
+    font-size: var(--h1-large);
+    line-height: 1.22;
+}
+
+h1,
+.h1 {
+    font-size: var(--h1);
+    line-height: 1.35;
+}
+
+h2.h2-large {
+    font-size: var(--h2-large);
+    line-height: 1.35;
+}
+
+h2,
+.h2 {
+    font-size: var(--h2);
+    line-height: 1.28;
+}
+
+h2.h2-medium {
+    font-size: var(--h2-medium);
+    line-height: 1.42;
+}
+h2.h2-small {
+    font-size: var(--h2-small);
+    line-height: 1.5;
+}
+
+h3.h3-extra-large {
+    font-size: var(--h3-extra-large);
+    line-height: 1.28;
+}
+h3.h3-large {
+    font-size: var(--h3-large);
+    line-height: 1.36;
+}
+h3.h3-regular {
+    font-size: var(--h3-regular);
+    line-height: 1.42;
+}
+
+h3,
+.h3 {
+    font-size: var(--h3);
+    line-height: 1.45;
+}
+
+h3.h3-medium {
+    font-size: var(--h3-medium);
+    line-height: 1.46;
+}
+
+h3.h3-small {
+    font-size: var(--h3-small);
+    line-height: 1.56;
+}
+
+h3.h3-extra-small {
+    font-size: var(--h3-extra-small);
+    line-height: 1.63;
+}
+
+h4.h4-large {
+    font-size: var(--h4-large);
+    line-height: 1.42;
+}
+
+h4,
+.h4 {
+    font-size: var(--h4);
+    line-height: 1.5;
+}
+
+h4.h4-small {
+    font-size: var(--h4-small);
+    line-height: 1.56;
+}
+
+h5,
+.h5 {
+    font-size: var(--h5);
+    line-height: 1.56;
+}
+
+h6,
+.h6 {
+    font-size: var(--h6);
+    line-height: 1.62;
+}

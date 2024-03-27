@@ -1,0 +1,101 @@
+/*-------------------------
+    Global
+-------------------------*/
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    z-index: 999999999;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.loader-wrap {
+		width: 172px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		column-gap: 10px;
+		.single-box {
+			position: relative;
+			width: 35px;
+			.circle-holder {
+				position: relative;
+				overflow: hidden;
+				height: 150px;
+				&:before {
+					content: "";
+					position: absolute;
+					bottom:0; 
+					left: 0;
+					right: 0;
+					margin: 0 auto;
+					display: inline-block;
+					width: 20px;
+					height: 20px;
+					border-radius: 50%;
+					animation: circle_up_down 1.2s infinite linear;
+					z-index: 2;
+				}	
+			}				
+			&:nth-child(1) .circle-holder:before {
+				background-color: var(--color-scandal);
+			}
+			&:nth-child(2) .circle-holder:before {
+				background-color: var(--color-mimosa);
+			}
+			&:nth-child(3) .circle-holder:before {
+				background-color: var(--color-selago);
+			}
+			&:nth-child(4) .circle-holder:before {
+				background-color: var(--color-old-lace);
+			}
+			.shadow-holder {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 4px;
+				border-radius: 50%;
+				background: #aaaaaa;
+				opacity: 1;
+				animation: shadow_scale 1.2s infinite linear;
+				z-index: 1;
+			}
+			&:nth-child(1) .circle-holder:before,
+			&:nth-child(1) .shadow-holder {
+				animation-delay: 0.1s;
+			}
+			&:nth-child(2) .circle-holder:before,
+			&:nth-child(2) .shadow-holder {
+				animation-delay: 0.3s;
+			}
+			&:nth-child(3) .circle-holder:before,
+			&:nth-child(3) .shadow-holder {
+				animation-delay: 0.5s;
+			}
+			&:nth-child(4) .circle-holder:before,
+			&:nth-child(4) .shadow-holder {
+				animation-delay: 0.7s;
+			}
+		}
+	}
+}
+
+@keyframes circle_up_down {
+    0%   { transform: translateY(10px); }
+    40%  { transform: translateY(-90px); width: 20px; height: 20px; }
+    50%  { transform: translateY(-100px); width: 20px; height: 20px; }
+    65%  { transform: translateY(-90px); width: 20px; height: 20px; }
+    75%  { transform: translateY(0px); width: 20px; height: 20px; }
+    100% { transform: translateY(10px);  width: 35px; height: 10px;}
+}
+
+@keyframes shadow_scale {
+    0%   { transform: scale(1, 1); opacity: 1; }
+    50%  { transform: scale(0.1, 0.1); opacity: 0.1; }
+    100% { transform: scale(1, 1); opacity: 1; }
+}

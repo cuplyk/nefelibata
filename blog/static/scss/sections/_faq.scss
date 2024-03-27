@@ -1,0 +1,102 @@
+.faq-box-layout1 {
+    padding: 60px 60px 70px;
+    border-radius: 8px;
+    @media (max-width: 991px) {
+        padding: 50px 50px 60px;
+    }
+    @media (max-width: 767px) {
+        padding: 40px 40px 50px;
+    }
+    @media (max-width: 575px) {
+        padding: 30px 30px 40px;
+    }
+
+    .single-item {
+        margin-bottom: 15px;
+        padding-bottom: 25px;
+        border-radius: 0;
+        background-color: transparent;
+        transition: var(--transition);
+
+        .item-nav {
+            padding: 0;
+            border: none;
+            margin-bottom: 0;
+            background-color: transparent;
+
+            a {
+                font-family: var(--font-secondary);
+                font-size: 22px;
+                font-weight: 600;
+                border-radius: 0;
+                color: var(--color-dark-1);
+                width: 100%;
+                display: block;
+                padding: 10px 50px 0 0;
+                position: relative;
+                transition: var(--transition);
+
+                @media (max-width: 767px) {
+                    font-size: 20px;
+                }
+
+                @media (max-width: 575px) {
+                    font-size: 18px;
+                }
+
+                &:after {
+                    position: absolute;
+                    content: "\edf1";
+                    top: 18px;
+                    right: 3px;
+                    font-size: 10px;
+                    z-index: 5;
+                    font-family: 'icomoon';
+                    color: var(--color-dark-1);
+                    transition: var(--transition);
+                }
+
+                &:before {
+                    border-radius: 50%;
+                    content: "";
+                    height: 16px;
+                    width: 16px;
+                    border: 1px solid;
+                    border-color: var(--color-dark-1);
+                    position: absolute;
+                    top: 17px;
+                    right: 0;
+                    z-index: 1;
+                }
+
+                &.collapsed {
+                    padding: 10px 50px 0 0;
+                    color: var(--color-dark-1);
+                    transition: var(--transition);
+
+                    &:after {
+                        content: "\ee09";
+                    }
+                }
+            }
+        }
+
+        .item-content-wrap {
+            .item-content {
+                padding: 15px 0 0;
+                transition: var(--transition);
+
+                p {
+                    margin-bottom: 0;
+                    padding-right: 50px;
+                }
+            }
+        }
+
+        &:last-child {
+            border-bottom: 0 !important;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+}
