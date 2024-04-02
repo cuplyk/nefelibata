@@ -11,6 +11,11 @@ STATUS_CHOICES = (
 class Tag(models.Model):
     name = models.CharField(max_length=100, unique=True)
 
+    #class to control the plural name of the class
+    class Meta:
+        verbose_name_plural = 'tags'
+
+    #provide a better string representation of your objects
     def __str__(self):
         return self.name
 
@@ -35,3 +40,9 @@ class Post(models.Model):
         if not self.slug:
             self.slug = slugify(self.title)
         super().save(*args, **kwargs)
+
+class Comment(models.Model):
+    author = models.CharField(max_length=60)
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    post = models.ForeignKey("Post", on_delete=models.CASCADE)

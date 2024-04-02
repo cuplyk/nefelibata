@@ -1,0 +1,71 @@
+{% load static %}
+<div class="d-flex align-items-center gap-3">
+    <div class="d-lg-block d-none">
+        <div class="search-trigger-wrap">
+            <a href="#search-trigger" title="search">
+                <i class="regular-search-02"></i>
+            </a>
+        </div>
+    </div>
+    <div class="d-lg-block d-none">
+        <div class="profile-wrap dropdown-item-wrap">
+            <div class="navbar navbar-expand-md">
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Profile">
+                        <span class="thumble-holder img-height-100"><img width="40" height="40" src="assets/media/blog/profile4.webp" alt="Profile"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-end animate slideIn" aria-labelledby="navbarDropdown2">
+                        <div class="dropdown-menu-inner">
+                            <div class="profile-content with-icon">
+                                <ul>
+                                    <li><a href="author.html">
+                                            <div class="icon-holder"><i class="regular-user"></i></div>Profile
+                                        </a></li>
+                                    <li><a href="author.html">
+                                            <div class="icon-holder"><i class="regular-activity"></i></div>Activity Log
+                                        </a></li>
+                                    <li><a href="author.html">
+                                            <div class="icon-holder"><i class="regular-plus-rectangle"></i></div>Library
+                                        </a></li>
+                                </ul>
+                            </div>
+                            <div class="profile-content">
+                                <ul>
+                                    <li><a href="author.html">Become a Member</a></li>
+                                    <li><a href="author.html">Apply for author verification</a></li>
+                                    <li><a href="author.html">Settings</a></li>
+                                </ul>
+                            </div>
+                            <div class="mt-3">
+                                <a href="#" class="w-100 axil-btn axil-btn-ghost btn-color-alter axil-btn-small">Sign Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-lg-none d-block">
+        <div class="my_switcher">
+            <ul>
+                <li title="Light Mode">
+                    <button type="button" aria-label="Light" class="setColor light" data-theme="light">
+                        <i class="solid-light-mode"></i>
+                    </button>
+                </li>
+                <li title="Dark Mode">
+                    <button type="button" aria-label="Dark" class="setColor dark" data-theme="dark">
+                        <i class="solid-half-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mobile-menu-btn d-lg-none d-block">
+        <button aria-label="Offcanvas" class="btn-wrap" data-bs-toggle="offcanvas" data-bs-target="#mobilemenu-popup">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</div>
