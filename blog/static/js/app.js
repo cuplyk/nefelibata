@@ -48,6 +48,7 @@
             }
         },
 
+
         axilBackToTop: function () {
             var btn = $('#backto-top');
             $(window).on('scroll', function () {
