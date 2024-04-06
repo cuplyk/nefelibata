@@ -21,7 +21,7 @@ class Tag(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=300, unique=True)
-    slug = models.SlugField(max_length=300, unique=True, editable=False)
+    slug = models.SlugField(max_length=300, unique=True, editable=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
     content = models.TextField()
     status = models.IntegerField(choices=STATUS_CHOICES, default=0)
