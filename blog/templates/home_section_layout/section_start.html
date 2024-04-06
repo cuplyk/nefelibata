@@ -26,7 +26,7 @@
                             <div class="post-box-layout13 box-border-dark-1 radius-default padding-20 bg-color-{% cycle 'scandal' 'mimosa' 'selago' 'old-lace' %} box-shadow-large shadow-style-2 transition-default">
                                 <div class="figure-holder radius-default">
                                     <a href="#" class="link-wrap img-height-100">
-                                        {% if post.image %}
+                                        {% if post.image and post.image.url %}
                                         <img width="660" height="596" src="{{ post.image.url }}" alt="{{ post.title }}">
                                         {% else %}
                                         <img width="660" height="596" src="{% static 'media/blog/post48.webp' %}" alt="{{ post.title }}">

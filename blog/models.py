@@ -26,7 +26,7 @@ class Post(models.Model):
     content = models.TextField()
     status = models.IntegerField(choices=STATUS_CHOICES, default=0)
     tags = models.ManyToManyField(Tag, related_name='posts')
-    image = models.ImageField(upload_to='post_images/', null=True, blank=True)
+    image = models.ImageField(upload_to='post_images/', null=True, blank=True)  
     updated_on = models.DateTimeField(auto_now=True)
     created_on = models.DateTimeField(auto_now_add=True)
 
