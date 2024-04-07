@@ -27,9 +27,9 @@
                                 <div class="figure-holder radius-default">
                                     <a href="#" class="link-wrap img-height-100">
                                         {% if post.image and post.image.url %}
-                                        <img width="660" height="596" src="{{ post.image.url }}" alt="{{ post.title }}">
+                                        <img width="660" height="596" src="{{ post.image.url }}" alt="{{ post.title }}"><!-- 404 error-->
                                         {% else %}
-                                        <img width="660" height="596" src="{% static 'media/blog/post48.webp' %}" alt="{{ post.title }}">
+                                        <img width="660" height="596" src="{% static 'media/post_images/photoyoutube.jpg' %}" alt="{{ post.title }}">
                                         {% endif %}
                                     </a>
                                 </div>
@@ -50,7 +50,7 @@
                                             <li class="post-author">
                                                 <a href="#">
                                                     <img src="{% static 'media/blog/profile3.webp' %}" alt="Author">
-                                                    {{ post.author.get_full_name }}
+                                                    {{ post.author }}
                                                 </a>
                                             </li>
                                             <li>
