@@ -13,3 +13,7 @@ class IndexFirstListView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['posts'] = Post.objects.order_by('-created_on')[:4]
         return context
+    
+def image_test_view(request):
+    posts = Post.objects.all()
+    return render(request, 'image_test.html', {'posts': posts})
