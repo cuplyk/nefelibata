@@ -1,0 +1,96 @@
+/*-------------------------
+    Team
+-------------------------*/
+.team-wrap-layout1 {
+    .border-bottom-dark {
+        padding-bottom: 60px;
+        border-bottom: 1px solid;
+        border-color: var(--color-border-dark-1);
+        @media (max-width: 767px) {
+            padding-bottom: 50px;
+        }
+    }
+}
+
+.team-box-layout1 {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    .figure-holder {
+        border-radius: 50%;
+        max-width: 140px;
+        width: 100%;
+        .link-wrap {
+            border-radius: 50%;
+        }
+        img {
+            border-radius: 50%;
+        }
+    }
+    .content-holder {
+        flex: 1;
+        .entry-title {
+            margin-bottom: 8px;
+            a {
+                color: var(--color-dark-1);
+                transition: var(--transition);
+                &:hover {
+                    color: var(--color-primary);
+                }
+            }
+        }
+        .skill-box {
+            .skill-for {
+                margin-bottom: 3px;
+                font-size: 14px;
+            }
+            .skill-on {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                column-gap: 5px;
+            }
+        }
+    }
+}
+
+.team-layout-2 {
+    .figure-holder {       
+        margin-bottom: 15px;
+        border: 1px solid;
+        border-radius: 8px;
+        border-color: var(--color-border-dark-1);
+        img {
+            border-radius: 6px;
+        }
+    }
+
+    .content-holder {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 10px;
+        justify-content: space-between;
+        align-items: flex-start;
+        .entry-title {
+            margin-bottom: 5px;
+
+            a {
+                color: var(--color-dark-1);
+                transition: var(--transition);
+
+                &:hover {
+                    color: var(--color-primary);
+                }
+            }
+        }
+
+        .entry-designation {
+            margin-bottom: 10px;
+            color: var(--color-body);
+            transition: var(--transition);
+        }
+    }
+}

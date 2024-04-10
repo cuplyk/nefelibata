@@ -1,0 +1,50 @@
+/*-------------------------
+    About
+-------------------------*/
+.about-box-layout-1 {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .figure-holder {
+        height: 100%;
+        position: relative;
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .content-holder {
+        margin-top: 20px;
+        @media (max-width: 991px) {
+            margin-top: 0;
+        }
+    }
+    .list-style-1 {
+        padding: 0;
+        margin: 0 0 25px 0;
+        list-style: none;
+
+        li {
+            max-width: 785px;
+            width: 100%;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            position: relative;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:before {
+                content: "\ed8e";
+                font-family: 'icomoon' !important;
+                position: absolute;
+                left: 0;
+                top: 4px;
+                line-height: 1;
+                color: var(--color-body);
+                font-weight: 500;
+            }
+        }
+    }
+}

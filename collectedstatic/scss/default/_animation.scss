@@ -1,0 +1,342 @@
+/*-------------------------
+    Animation
+-------------------------*/
+.figure-scale-animation {
+    .figure-holder {
+        overflow: hidden;
+
+        img {
+            transform: scale(1);
+            transition: var(--transition-figure);
+        }
+    }
+
+    &:hover {
+        .figure-holder {
+            img {
+                transform: scale(1.08);
+            }
+        }
+    }
+}
+
+.shadow-style-1 {
+    &.box-shadow-large {
+        &:hover {
+            transform: translateX(5px) translateY(5px);
+        }
+    }
+    &.box-shadow-medium {
+        &:hover {
+            transform: translateX(4px) translateY(4px);
+        }
+    }
+    &.box-shadow-default {
+        &:hover {
+            transform: translateX(3px) translateY(3px);
+        }
+    }
+    &.box-shadow-small {
+        &:hover {
+            transform: translateX(2px) translateY(2px);
+        }
+    }
+
+    &.box-border-dark-1 {
+        &.no-border {
+            border: 0;
+        }
+        &.box-shadow-large {
+            box-shadow: 5px 5px 0px 0px var(--color-border-dark-1);
+            &:hover {
+                box-shadow: -5px -5px 0px 0px var(--color-border-dark-1);
+            }
+            &.shadow-fixed {
+                box-shadow: 5px 5px 0px 0px var(--color-border-dark-1-fixed);
+                &:hover {
+                    box-shadow: -5px -5px 0px 0px var(--color-border-dark-1-fixed);
+                }
+            }
+        }
+        &.box-shadow-medium {
+            box-shadow: 4px 4px 0px 0px var(--color-border-dark-1);
+            &:hover {
+                box-shadow: -4px -4px 0px 0px var(--color-border-dark-1);
+            }
+            &.shadow-fixed {
+                box-shadow: 4px 4px 0px 0px var(--color-border-dark-1-fixed);
+                &:hover {
+                    box-shadow: -4px -4px 0px 0px var(--color-border-dark-1-fixed);
+                }
+            }
+        }
+        &.box-shadow-default {
+            box-shadow: 3px 3px 0px 0px var(--color-border-dark-1);
+            &:hover {
+                box-shadow: -3px -3px 0px 0px var(--color-border-dark-1);
+            }
+            &.shadow-fixed {
+                box-shadow: 3px 3px 0px 0px var(--color-border-dark-1-fixed);
+                &:hover {
+                    box-shadow: -3px -3px 0px 0px var(--color-border-dark-1-fixed);
+                }
+            }
+        }
+        &.box-shadow-small {
+            box-shadow: 2px 2px 0px 0px var(--color-border-dark-1);
+            &:hover {
+                box-shadow: -2px -2px 0px 0px var(--color-border-dark-1);
+            }
+            &.shadow-fixed {
+                box-shadow: 2px 2px 0px 0px var(--color-border-dark-1-fixed);
+                &:hover {
+                    box-shadow: -2px -2px 0px 0px var(--color-border-dark-1-fixed);
+                }
+            }
+        }
+    }
+
+    &.box-border-dark-2 {
+        &.no-border {
+            border: 0;
+        }
+        &.box-shadow-large {
+            box-shadow: 5px 5px 0px 0px var(--color-border-dark-2);
+            &:hover {
+                box-shadow: -5px -5px 0px 0px var(--color-border-dark-2);
+            }
+            &.shadow-fixed {
+                box-shadow: 5px 5px 0px 0px var(--color-border-dark-2-fixed);
+                &:hover {
+                    box-shadow: -5px -5px 0px 0px var(--color-border-dark-2-fixed);
+                }
+            }
+        }
+        &.box-shadow-medium {
+            box-shadow: 4px 4px 0px 0px var(--color-border-dark-2);
+            &:hover {
+                box-shadow: -4px -4px 0px 0px var(--color-border-dark-2);
+            }
+            &.shadow-fixed {
+                box-shadow: 4px 4px 0px 0px var(--color-border-dark-2-fixed);
+                &:hover {
+                    box-shadow: -4px -4px 0px 0px var(--color-border-dark-2-fixed);
+                }
+            }
+        }
+        &.box-shadow-default {
+            box-shadow: 3px 3px 0px 0px var(--color-border-dark-2);
+            &:hover {
+                box-shadow: -3px -3px 0px 0px var(--color-border-dark-2);
+            }
+            &.shadow-fixed {
+                box-shadow: 3px 3px 0px 0px var(--color-border-dark-2-fixed);
+                &:hover {
+                    box-shadow: -3px -3px 0px 0px var(--color-border-dark-2-fixed);
+                }
+            }
+        }
+        &.box-shadow-small {
+            box-shadow: 2px 2px 0px 0px var(--color-border-dark-2);
+            &:hover {
+                box-shadow: -2px -2px 0px 0px var(--color-border-dark-2);
+            }
+            &.shadow-fixed {
+                box-shadow: 2px 2px 0px 0px var(--color-border-dark-2-fixed);
+                &:hover {
+                    box-shadow: -2px -2px 0px 0px var(--color-border-dark-2-fixed);
+                }
+            }
+        }
+    }
+}
+
+.shadow-style-2 {
+    &.box-shadow-large {        
+        &:hover {
+            transform: translateX(-5px) translateY(-5px);
+        }
+    }
+    &.box-shadow-medium {        
+        &:hover {
+            transform: translateX(-4px) translateY(-4px);
+        }
+    }
+    &.box-shadow-default {        
+        &:hover {
+            transform: translateX(-3px) translateY(-3px);
+        }
+    }
+    &.box-shadow-small {       
+        &:hover {
+            transform: translateX(-2px) translateY(-2px);
+        }
+    }
+
+    &.box-border-dark-1 {
+        &.no-border {
+            border: 0;
+        }
+        &.box-shadow-large {        
+            &:hover {
+                box-shadow: 5px 5px 0px 0px var(--color-border-dark-1);
+            }
+            &.shadow-fixed {
+                &:hover {
+                    box-shadow: 5px 5px 0px 0px var(--color-border-dark-1-fixed);
+                }
+            }
+        }
+        &.box-shadow-medium {        
+            &:hover {
+                box-shadow: 4px 4px 0px 0px var(--color-border-dark-1);
+            }
+            &.shadow-fixed {
+                &:hover {
+                    box-shadow: 4px 4px 0px 0px var(--color-border-dark-1-fixed);
+                }
+            }
+        }
+        &.box-shadow-default {        
+            &:hover {
+                box-shadow: 3px 3px 0px 0px var(--color-border-dark-1);
+            }
+            &.shadow-fixed {
+                &:hover {
+                    box-shadow: 3px 3px 0px 0px var(--color-border-dark-1-fixed);
+                }
+            }
+        }
+        &.box-shadow-small {       
+            &:hover {
+                box-shadow: 2px 2px 0px 0px var(--color-border-dark-1);
+            }
+            &.shadow-fixed {
+                &:hover {
+                    box-shadow: 2px 2px 0px 0px var(--color-border-dark-1-fixed);
+                }
+            }
+        }
+    }
+
+    &.box-border-dark-2 {
+        &.no-border {
+            border: 0;
+        }
+        &.box-shadow-large {        
+            &:hover {
+                box-shadow: 5px 5px 0px 0px var(--color-border-dark-2);
+            }
+            &.shadow-fixed {
+                &:hover {
+                    box-shadow: 5px 5px 0px 0px var(--color-border-dark-2-fixed);
+                }
+            }
+        }
+        &.box-shadow-medium {        
+            &:hover {
+                box-shadow: 4px 4px 0px 0px var(--color-border-dark-2);
+            }
+            &.shadow-fixed {
+                &:hover {
+                    box-shadow: 4px 4px 0px 0px var(--color-border-dark-2-fixed);
+                }
+            }
+        }
+        &.box-shadow-default {        
+            &:hover {
+                box-shadow: 3px 3px 0px 0px var(--color-border-dark-2);
+            }
+            &.shadow-fixed {
+                &:hover {
+                    box-shadow: 3px 3px 0px 0px var(--color-border-dark-2-fixed);
+                }
+            }
+        }
+        &.box-shadow-small {       
+            &:hover {
+                box-shadow: 2px 2px 0px 0px var(--color-border-dark-2);
+            }
+            &.shadow-fixed {
+                &:hover {
+                    box-shadow: 2px 2px 0px 0px var(--color-border-dark-2-fixed);
+                }
+            }
+        }
+    }
+}
+
+.animated-border {
+    position: relative;
+    z-index: 1;
+    &:before {
+        height: 100%;
+        width: 100%;
+        border: 1px solid;
+        border-color: var(--color-border-dark-2);
+        border-radius: 8px;
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        transition: var(--transition);
+    } 
+    &.border-style-large { 
+        &:before {
+            transform: translateX(0) translateY(0);    
+        }         
+        &:hover {
+            &:before {
+                transform: translateX(7px) translateY(7px);
+            }
+            .animation-child {
+                transform: translateX(-3px) translateY(-3px);
+            }
+        }
+    }
+    &.border-style-medium { 
+        &:before {
+            transform: translateX(0) translateY(0);
+        }             
+        &:hover {
+            &:before {
+                transform: translateX(5px) translateY(5px);
+            }
+            .animation-child {
+                transform: translateX(-2px) translateY(-2px);
+            }
+        }
+    }    
+    &.border-style-small { 
+        &:before {
+            transform: translateX(0) translateY(0);
+        }             
+        &:hover {
+            &:before {
+                transform: translateX(3px) translateY(3px);
+            }
+            .animation-child {
+                transform: translateX(-1px) translateY(-1px);
+            }
+        }
+    }    
+}
+
+.underline-animation {
+    a {
+        position: relative;
+        display: inline;
+        background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+        background-size: 0px 2px;
+        background-position: 0px 95%;
+        padding: 0.1% 0px;
+        background-repeat: no-repeat;
+        color: inherit;
+        transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+
+        &:hover {
+            background-size: 100% 2px;
+        }
+    }
+}

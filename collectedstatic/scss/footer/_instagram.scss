@@ -1,0 +1,28 @@
+/*-------------------------
+    Instagram
+-------------------------*/
+.instagram-wrap-layout1 {
+    position: relative;
+    .follow-btn {
+        background-color: var(--color-dark-1-fixed);
+        color: var(--color-light-1-fixed);
+        border: 1px solid;
+        border-color: var(--color-light-1-fixed);
+        display: inline-flex;
+        gap: 10px;
+        align-items: center;
+        font-weight: 600;
+        padding: 7px 26px;
+        border-radius: 45px;
+        position: absolute;
+        top: calc(50% + 15px);
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        transition: var(--transition);
+        &:hover {
+            background-color: var(--color-light-1-fixed);
+            color: var(--color-dark-1-fixed);
+            border-color: var(--color-dark-1-fixed);
+        }
+    }
+}

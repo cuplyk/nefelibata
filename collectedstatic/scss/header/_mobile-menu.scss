@@ -1,0 +1,212 @@
+/*-------------------------
+    Mobile Menu
+-------------------------*/
+@media (min-width: 992px) {
+    .mobile-menu-wrap {
+        visibility: visible!important;
+    }
+}
+@media (max-width: 991px) {
+    .mobile-menu-btn {
+        .btn-wrap {
+            background-color: transparent;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0;
+            transition: var(--transition);
+            span {
+                display: block;
+                height: 2px;
+                width: 20px;
+                background-color: var(--color-dark-1-fixed);
+                margin-bottom: 4px;
+                border-radius: 10px;
+                transition: var(--transition);
+                &:first-child {
+                    width: 20px;
+                    margin-right: 0;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                    width: 20px;
+                    margin-right: 0;
+                }
+            }
+            &:focus {
+                box-shadow: none;
+            }
+            &:hover {
+                span {
+                    &:last-child {
+                        width: 10px;
+                        margin-right: 10px;
+                    }
+                    &:first-child {
+                        width: 10px;
+                        margin-right: -10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .menuCloseMask {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    header.header {
+        .mobile-menu-wrap { 
+            padding-bottom: 140px;           
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            left: -260px;
+            height: 100vh;
+            max-width: 260px;
+            width: 100%;
+            background-color: var(--color-light-1);
+            transition: all 0.8s cubic-bezier(0.77, 0.2, 0.05, 1);    
+            &.show {
+                left: 0;
+            }
+            .mobile-logo-wrap {
+                padding: 30px 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                position: relative;
+
+                .logo-holder {
+                    text-align: center;
+                }
+
+                .mobile-close {
+                    color: var(--color-dark-1);
+                    padding: 0;
+                    font-size: 22px;
+                    position: absolute;
+                    right: 8px;
+                    line-height: 1;
+                    top: 8px;
+                    background-color: transparent;
+                    border: 0;
+                    transition: var(--transition);
+
+                    &:focus {
+                        box-shadow: none;
+                    }
+                    &:hover {
+                        color: var(--color-primary);
+                    }
+                }
+            }
+            nav.template-main-menu {
+                margin-top: 20px;
+                height: 100%;
+                width: 100%;
+                > ul.menu {
+                    height: 100%;
+                    width: 100%;
+                    display: block;
+                    >li {
+                        margin-bottom: 8px;
+                        padding-bottom: 8px;
+                        border-bottom: 1px solid;
+                        border-color: var(--color-light-3);
+                        &:last-child {
+                            margin-bottom: 0;
+                            padding-bottom: 0;
+                            border-bottom: 0;
+                        }
+                        &.is-active {
+                            >a {
+                                color: var(--color-primary);
+                            }
+                        }
+                        a.is-active {
+                            color: var(--color-primary);
+                        }
+                    }
+                    > li.menu-item:first-child > a {
+                        padding: 5px 15px;
+                    }
+                    > li.menu-item > a {
+                        padding: 5px 15px;
+                    }
+                }
+                ul.menu {
+                    li.menu-item-has-children {
+                        position: relative;
+                        &:before {
+                            position: absolute;
+                            top: 0;
+                            right: 10px;
+                            font-size: 20px;
+                            content: "\ed6a";
+                            z-index: -1;
+                            font-family: var(--font-icomoon);
+                            font-weight: 600;
+                        }
+                        ul.sub-menu {
+                            display: none;
+                            li {
+                                a.is-active {
+                                    color: var(--color-primary);
+                                }
+                            }
+                            li.is-active {
+                                >a {
+                                    color: var(--color-primary);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        nav.template-main-menu {
+            >ul.menu {          
+                >li.menu-item {
+                    >a {
+                        color: var(--color-menu);
+                        &:hover {
+                            color: var(--color-primary);
+                        }
+                    }
+                    ul.sub-menu {  
+                        background-color: var(--color-light-1);    
+                        li.menu-item {
+                            a {
+                                color: var(--color-sub-menu);                          
+                                &:hover {
+                                    color: var(--color-primary);
+                                }
+                            }
+                            &.second-lavel {
+                                ul.sub-menu {
+                                    li.menu-item {
+                                        a {
+                                            padding: 5px 5px 5px 65px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }  
+}

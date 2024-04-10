@@ -37,9 +37,11 @@
                                     <div>
                                         <div class="entry-category style-2 color-dark-1-fixed">
                                             <ul>
+                                                {% for tag in post.tags.all%}
                                                 <li>
-                                                    <a href="#">{{ post.tags.first }}</a>
+                                                    <a href="#">{{ tag }}</a>
                                                 </li>
+                                                {% endfor %}
                                             </ul>
                                         </div>
                                         <h3 class="entry-title h3-extra-large color-dark-1-fixed underline-animation">

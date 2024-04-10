@@ -1,0 +1,158 @@
+/*-------------------------
+    Contact
+-------------------------*/
+.contact-layout-1 {
+    .contact-info-box {
+        padding: 50px 30px;
+        text-align: center;
+        transition: var(--transition);
+
+        @media (max-width: 991px) {
+            padding: 40px 20px;
+        }
+
+        @media (max-width: 767px) {
+            padding: 30px 15px;
+        }
+
+        .box-icon {
+            line-height: 1;
+            font-size: 40px;
+            margin-bottom: 13px;
+            color: var(--color-dark-1-fixed);
+            transition: var(--transition);
+        }
+
+        .contact-way {
+            color: var(--color-dark-1-fixed);
+            font-size: 20px;
+            font-weight: 700;
+            font-family: var(--font-secondary);
+            display: inline-block;
+            margin-bottom: 2px;
+            transition: var(--transition);
+        }
+
+        .contact-text {
+            font-size: 17px;
+            margin-bottom: 30px;
+            color: var(--color-body-fixed);
+            transition: var(--transition);
+        }
+    }
+}
+
+.contact-form-wrap {
+    margin-bottom: 50px;
+    padding: 60px;
+    transition: var(--transition);
+
+    @media (max-width: 991px) {
+        padding: 40px;
+    }
+
+    @media (max-width: 767px) {
+        padding: 30px;
+    }
+
+    @media (max-width: 575px) {
+        margin-bottom: 42px;
+    }
+
+    form {
+        textarea,
+        input {
+            font-size: 18px;
+            padding: 15px 0;
+            margin-bottom: 20px;
+            color: var(--color-body);
+            border-radius: 0;
+            border: 0;
+            background-color: transparent;
+            border-bottom: 1px solid;
+            border-color: var(--color-border-dark-2);
+            transition: var(--transition);
+
+            &:focus {
+                color: var(--color-body);
+                box-shadow: none;
+                outline: none;
+                border-color: var(--color-border-dark-1);
+                background-color: transparent;
+            }
+        }
+
+        input.styled-checkbox {
+            padding: initial;
+            border: 1px solid;
+            border-color: var(--color-border-dark-1);
+        }
+
+        .select-type {
+            margin-bottom: 20px;
+
+            .select-title {
+                color: var(--color-dark-1);
+                font-size: 18px;
+                font-weight: 700;
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+
+            .select-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                columns: 2;
+                -webkit-columns: 2;
+                -moz-columns: 2;
+                @media (max-width: 575px) {
+                    columns: 1;
+                    -webkit-columns: 1;
+                    -moz-columns: 1;
+                }
+                label {
+                    color: var(--color-body);
+                    font-size: 18px;
+                    padding-left: 5px;
+                    transition: var(--transition);
+                }
+                label,
+                input {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        input::-webkit-input-placeholder,
+        textarea::-webkit-input-placeholder {
+            color: var(--color-meta);
+            font-size: 18px;
+            transition: var(--transition);
+        }
+
+        input:-ms-input-placeholder,
+        textarea:-ms-input-placeholder {
+            color: var(--color-meta);
+            font-size: 18px;
+            transition: var(--transition);
+        }
+
+        input:-moz-placeholder,
+        textarea:-moz-placeholder {
+            color: var(--color-meta);
+            font-size: 18px;
+            transition: var(--transition);
+        }
+    }
+}
+
+.map-wrap {
+    margin-bottom: 50px;
+    @media (max-width: 575px) {
+        margin-bottom: 42px;
+    }
+    .map-box {
+        text-align: center;
+    }
+}

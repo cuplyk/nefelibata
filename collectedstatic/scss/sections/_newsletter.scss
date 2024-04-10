@@ -1,0 +1,123 @@
+/*-------------------------
+    Newsletter
+-------------------------*/
+.newsletter-box-layout1 {
+    text-align: center;
+    padding: 61px 30px;
+    position: relative;
+    z-index: 1;
+    @media (max-width: 767px) {
+        padding: 40px 20px;
+    }
+    .entry-title {
+        max-width: 600px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 6px;
+    }
+    .entry-description {
+        max-width: 400px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .newsletter-form {
+        margin-top: 10px;
+        display: inline-block;
+        background-color: var(--color-light-1-fixed);
+        @media (max-width: 767px) {
+            background-color: transparent;
+            border: 0;
+            box-shadow: none;
+            &:hover {
+                box-shadow: none!important;
+                transform: translateX(0) translateY(0);
+            }
+        }
+        .email-input {
+            background-color: transparent;
+            border: 0;
+            height: 40px;
+            width: 372px;
+            padding: 2px 15px;
+            border-radius: 8px 0 0 8px;            
+            color: var(--color-dark-1-fixed);
+
+            &:focus {
+                outline: none;
+            }
+            @media (max-width: 767px) {
+                width: 100%;
+                height: 45px;
+                border-radius: 8px; 
+                background-color: var(--color-light-1-fixed); 
+                margin-bottom: 5px;
+                border: 1px solid;
+                border-color: var(--color-border-dark-1-fixed);
+            }
+        }
+        .axil-btn {
+            height: 41px;
+            border-top: 0;
+            border-right: 0;
+            border-bottom: 0;
+            background-color: var(--color-btn-bg);
+            border-color: var(--color-border-dark-1);
+            border-radius: 0 8px 8px 0;
+            @media (max-width: 767px) {
+                border-radius: 8px;  
+                border: 1px solid;
+                border-color: var(--color-border-dark-1);
+                &:hover {
+                    box-shadow: 3px 3px 0px 0px var(--color-border-dark-1-fixed);
+                    transform: translateX(-3px) translateY(-3px);
+                }
+            }
+        }
+        .btn-border2 {
+            border-color: var(--color-border-dark-2);
+            @media (max-width: 767px) {
+                border-color: var(--color-border-dark-2);
+                &:hover {
+                    box-shadow: 3px 3px 0px 0px var(--color-border-dark-2-fixed);
+                }
+            }
+        }
+        input::-webkit-input-placeholder {
+            color: var(--color-dark-1-fixed);
+        }
+
+        input:-ms-input-placeholder {
+            color: var(--color-dark-1-fixed);
+        }
+
+        input:-moz-placeholder {
+            color: var(--color-dark-1-fixed);
+        }
+    }
+    .elements-wrap {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        @media (max-width: 767px) {
+            display: none;
+        }
+        li {
+            position: absolute;
+            z-index: 2;
+            &:nth-child(1n) {
+                top: inherit;
+                bottom: 33px;
+                left: 27px;
+                right: inherit;
+            }
+            &:nth-child(2n) {
+                top: 0;
+                bottom: inherit;
+                left: inherit;
+                right: 0;
+            }
+        }
+    }
+}
