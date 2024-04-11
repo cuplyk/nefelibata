@@ -23,7 +23,7 @@ class Post(models.Model):
     title = models.CharField(max_length=300, unique=True)
     slug = models.SlugField(max_length=300, unique=True, editable=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
-    content = models.TextField()
+    content = models.TextField() 
     status = models.IntegerField(choices=STATUS_CHOICES, default=0)
     tags = models.ManyToManyField(Tag, related_name='posts')
     image = models.ImageField(upload_to='post_images/', null=True, blank=True)  
