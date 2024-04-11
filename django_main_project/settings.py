@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "blog",
     "accounts",
+    "mdeditor",
 ]
 
 MIDDLEWARE = [
@@ -121,9 +122,9 @@ USE_TZ = True
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'collectedstatic')
-STATICFILES_DIRS = [
+"""STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
-]
+]"""
 
 STATIC_URL = "/static/"
 
@@ -281,4 +282,34 @@ JAZZMIN_SETTINGS = {
     "changeform_format_overrides": {"auth.user": "collapsible", "auth.group": "vertical_tabs"},
     # Add a language dropdown into the admin
     "language_chooser": False,
+}
+
+
+
+MDEDITOR_CONFIGS = {
+    'default': {
+        'width': '90%',  # Custom edit box width
+        'heigth': 500,  # Custom edit box height
+        'toolbar': ["undo", "redo", "|",
+                    "bold", "del", "italic", "quote", "ucwords", "uppercase", "lowercase", "|",
+                    "h1", "h2", "h3", "h5", "h6", "|",
+                    "list-ul", "list-ol", "hr", "|",
+                    "link", "reference-link", "image", "code", "preformatted-text", "code-block", "table", "datetime",
+                    "emoji", "html-entities", "pagebreak", "goto-line", "|",
+                    "help", "info",
+                    "||", "preview", "watch", "fullscreen"],  # custom toolbar
+        'upload_image_formats': ["jpg", "jpeg", "gif", "png", "bmp", "webp"],  # image upload format type
+        'image_folder': 'editor',  # image save the folder name
+        'theme': 'default',  # edit box theme, dark / default
+        'preview_theme': 'default',  # Preview area theme, dark / default
+        'editor_theme': 'default',  # edit area theme, pastel-on-dark / default
+        'toolbar_autofixed': True,  # Whether the toolbar caps with the top
+        'search_replace': True,  # Whether to open the search for replacement
+        'watch': False,  # Live preview
+        'lineWrapping': False,  # lineWrapping
+        'lineNumbers': True,  # lineNumbers
+        'language': 'en',  # language
+        'mode': 'markdown',  # markdown / html
+        'codemirror': False,  # Enable CodeMirror editor
+    }
 }
