@@ -1,4 +1,4 @@
-{% extends "share_layout/base.html.html" %}
+{% extends "share_layout/base.html" %}
 {% load static %}
 {% block content %}
 
@@ -57,67 +57,34 @@
 <!--=====================================-->
 <section class="space-top-60 space-bottom-60 single-blog-wrap3 bg-color-light-1 transition-default">
     <div class="container">
-        {% for article in articles %}
+
         <div class="single-blog-content content-layout3">
             <div class="entry-category style-2 color-dark-1">
                 <ul>
                     <li>
-                        <a href="archive-layout1.html">{{ post.tag }}</a>
+                        <a href="#">{{ post.get_tags }}</a>
                     </li>
                 </ul>
             </div>
-            <h1 class="entry-title color-dark-1">{{ article.title }}</h1>
+            <h1 class="entry-title color-dark-1">{{ post.title }}</h1>
             <ul class="entry-meta color-dark-1">
-                <li class="post-author">
-                    by
-                    <a href="author.html">
-                        {{ article.author }}
-                    </a>
-                </li>
-                <li>
-                    <i class="regular-calendar-01"></i>{{ post.publish_date }}
-                </li>
-                <li>
-                    <i class="regular-clock-circle"></i>{{ post.read_time }}
-                </li>
-                <li>
-                    <i class="regular-eye"></i>{{ apost.views }}
-                </li>
-                <li>
-                    <i class="regular-chatting"></i>{{ post.comments_count }} Comments
-                </li>
+                <li class="post-author">by <a href="#">{{ post.author }}</a></li>
+                <li><i class="regular-calendar-01"></i>{{ post.created_on|date:"F d, Y" }}</li>
+                <li><i class="regular-eye"></i>{{ post.postvisit_set.count }} views</li>
+                <li><i class="regular-chatting"></i>{{ post.comments.count }} Comments</li>
             </ul>
-            
             <div class="mb-4 box-border-dark-1 radius-default transition-default">
                 <div class="figure-holder img-height-100 radius-medium">
-                    <img width="1232" height="600" src="assets/media/blog/post111.webp" alt="Post">
+                    <img width="1232" height="600" src="{{ post.image.url }}" alt="{{ post.title }}">
                 </div>
             </div>
+            {{ post.content|safe }}
         </div>
-        <div class="row sticky-coloum-wrap">
-            <div class="col-lg-8 sticky-coloum-item">
-                <div class="single-blog-content content-layout1 pe-lg-4">
-                    
-
-                    {{ post.content|safe }}
-
-
-
-                    <!-- Comments-->
-
-                </div>
-            </div>
-            
-
-            <!-- sidebar-->
-        </div>
-        {% endfor %}
     </div>
 </section>
 
            
 
-{% endblock 'content' %}
 
 <div class="tag-share-wrap">
     <div class="tagcloud-wrap">
@@ -234,3 +201,5 @@
         </div>
     </div>
 </div>
+
+{% endblock content %}

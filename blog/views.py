@@ -4,9 +4,9 @@ from django.db.models.query import QuerySet
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Post
-from django.shortcuts import get_list_or_404
+from django.shortcuts import get_list_or_404, get_object_or_404
 
-from django.views.generic import TemplateView, DeleteView
+from django.views.generic import TemplateView, DetailView
 # Create your views here.
 
 
@@ -21,7 +21,7 @@ class IndexFirstListView(TemplateView):
     
 
 
-class ArticleDetailViws(DeleteView):
+class ArticleDetailViews(DetailView):
     model = Post
     template_name = 'blog/articles/article_detail.html'
     context_object_name = 'post'
@@ -29,9 +29,8 @@ class ArticleDetailViws(DeleteView):
     slug_url_kwarg = 'slug'
 
     def get_object(self, queryset=None):
-        slug = self.kwargs.get('slug')
-
-        return get_list_or_404(Post, slug=slug)
+        slug = self.kwargs.get(self.slug_url_kwarg)
+        return get_object_or_404(self.model, slug=slug)
 
 
 
