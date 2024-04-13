@@ -129,7 +129,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'collectedstatic')
 STATIC_URL = "/static/"
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads/')
 
 
 
@@ -142,7 +142,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 
-
+# Admin interface
 JAZZMIN_SETTINGS = {
     # title of the window (Will default to current_admin_site.site_title if absent or None)
     "site_title": "Library Admin",
@@ -154,7 +154,7 @@ JAZZMIN_SETTINGS = {
     "site_brand": "Library",
 
     # Logo to use for your site, must be present in static files, used for brand on top left
-    "site_logo": "books/img/logo.png",
+    "site_logo": "media/logo.svg",
 
     # Logo to use for your site, must be present in static files, used for login form logo (defaults to site_logo)
     "login_logo": None,
@@ -285,11 +285,13 @@ JAZZMIN_SETTINGS = {
 }
 
 
+# Markdown Editor
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 MDEDITOR_CONFIGS = {
     'default': {
-        'width': '90%',  # Custom edit box width
-        'heigth': 500,  # Custom edit box height
+        'width': '100% ',  # Custom edit box width
+        'height': 700,  # Custom edit box height
         'toolbar': ["undo", "redo", "|",
                     "bold", "del", "italic", "quote", "ucwords", "uppercase", "lowercase", "|",
                     "h1", "h2", "h3", "h5", "h6", "|",
@@ -297,19 +299,22 @@ MDEDITOR_CONFIGS = {
                     "link", "reference-link", "image", "code", "preformatted-text", "code-block", "table", "datetime",
                     "emoji", "html-entities", "pagebreak", "goto-line", "|",
                     "help", "info",
-                    "||", "preview", "watch", "fullscreen"],  # custom toolbar
-        'upload_image_formats': ["jpg", "jpeg", "gif", "png", "bmp", "webp"],  # image upload format type
+                    "||", "preview", "watch", "fullscreen"],  # custom edit box toolbar
+        # image upload format type
+        'upload_image_formats': ["jpg", "jpeg", "gif", "png", "bmp", "webp", "svg"],
         'image_folder': 'editor',  # image save the folder name
         'theme': 'default',  # edit box theme, dark / default
         'preview_theme': 'default',  # Preview area theme, dark / default
         'editor_theme': 'default',  # edit area theme, pastel-on-dark / default
-        'toolbar_autofixed': True,  # Whether the toolbar caps with the top
+        'toolbar_autofixed': False,  # Whether the toolbar capitals
         'search_replace': True,  # Whether to open the search for replacement
-        'watch': False,  # Live preview
-        'lineWrapping': False,  # lineWrapping
+        'emoji': True,  # whether to open the expression function
+        'tex': True,  # whether to open the tex chart function
+        'flow_chart': True,  # whether to open the flow chart function
+        'sequence': True,  # Whether to open the sequence diagram function
+        'watch': True,  # Live preview
+        'lineWrapping': True,  # lineWrapping
         'lineNumbers': True,  # lineNumbers
-        'language': 'en',  # language
-        'mode': 'markdown',  # markdown / html
-        'codemirror': False,  # Enable CodeMirror editor
+        'language': 'en'  # zh / en / es
     }
 }

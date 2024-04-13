@@ -8,4 +8,9 @@ urlpatterns = [
     #prova
     path("", IndexFirstListView.as_view(), name='home.html' ),
     path('image-test/', image_test_view, name='image_test'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    
+]
+
+if settings.DEBUG:
+    # static files (images, css, javascript, etc.)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
