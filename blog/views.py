@@ -24,7 +24,7 @@ class IndexFirstListView(TemplateView):
 class ArticleDetailViws(DeleteView):
     model = Post
     template_name = 'blog/articles/article_detail.html'
-    context_object_name = 'article'
+    context_object_name = 'post'
     slug_field = 'slug'
     slug_url_kwarg = 'slug'
 

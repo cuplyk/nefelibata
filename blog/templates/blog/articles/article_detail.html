@@ -1,398 +1,236 @@
+{% extends "share_layout/base.html.html" %}
+{% load static %}
+{% block content %}
 
-        <!--=====================================-->
-        <!--=       breadcrumb Area Start       =-->
-        <!--=====================================-->
-        <section class="breadcrumb-wrap-layout1 bg-color-old-lace">
-            <div class="container">
-                <div class="breadcrumb-layout1">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Single Blog</li>
-                        </ol>
-                    </nav>
+
+
+<div class="axil-social social-layout-1 size-small gap-12">
+    <ul>
+        <li class="facebook">
+            <a aria-label="Learn more from Facebook" href="https://facebook.com/">
+                <i class="solid-facebook2"></i>
+            </a>
+        </li>
+        <li class="instagram">
+            <a aria-label="Learn more from Instagram" href="https://instagram.com/">
+                <i class="regular-instagram"></i>
+            </a>
+        </li>
+        <li class="mail-fast">
+            <a aria-label="Learn more from Mail fast" href="https://mail-fast.com/">
+                <i class="regular-mail-fast"></i>
+            </a>
+        </li>
+        <li class="pinterest">
+            <a aria-label="Learn more from Pinterest" href="https://pinterest.com/">
+                <i class="solid-pinterest-01"></i>
+            </a>
+        </li>
+        <li class="youtube">
+            <a aria-label="Learn more from Youtube" href="https://youtube.com/">
+                <i class="solid-youtube"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+
+
+<!--=====================================-->
+<!--=       breadcrumb Area Start       =-->
+<!--=====================================-->
+<section class="breadcrumb-wrap-layout1 bg-color-old-lace">
+    <div class="container">
+        <div class="breadcrumb-layout1">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Single Blog</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</section>
+<!--=====================================-->
+<!--=          Post Area Start          =-->
+<!--=====================================-->
+<section class="space-top-60 space-bottom-60 single-blog-wrap3 bg-color-light-1 transition-default">
+    <div class="container">
+        {% for article in articles %}
+        <div class="single-blog-content content-layout3">
+            <div class="entry-category style-2 color-dark-1">
+                <ul>
+                    <li>
+                        <a href="archive-layout1.html">{{ post.tag }}</a>
+                    </li>
+                </ul>
+            </div>
+            <h1 class="entry-title color-dark-1">{{ article.title }}</h1>
+            <ul class="entry-meta color-dark-1">
+                <li class="post-author">
+                    by
+                    <a href="author.html">
+                        {{ article.author }}
+                    </a>
+                </li>
+                <li>
+                    <i class="regular-calendar-01"></i>{{ post.publish_date }}
+                </li>
+                <li>
+                    <i class="regular-clock-circle"></i>{{ post.read_time }}
+                </li>
+                <li>
+                    <i class="regular-eye"></i>{{ apost.views }}
+                </li>
+                <li>
+                    <i class="regular-chatting"></i>{{ post.comments_count }} Comments
+                </li>
+            </ul>
+            
+            <div class="mb-4 box-border-dark-1 radius-default transition-default">
+                <div class="figure-holder img-height-100 radius-medium">
+                    <img width="1232" height="600" src="assets/media/blog/post111.webp" alt="Post">
                 </div>
             </div>
-        </section>
-        <!--=====================================-->
-        <!--=          Post Area Start          =-->
-        <!--=====================================-->
-        <section class="space-top-60 space-bottom-60 single-blog-wrap3 bg-color-light-1 transition-default">
-            <div class="container">
-                <div class="single-blog-content content-layout3">
-                    <div class="entry-category style-2 color-dark-1">
-                        <ul>
-                            <li>
-                                <a href="archive-layout1.html">TECH</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <h1 class="entry-title color-dark-1">The Science Behind Skin Care Products Has Come Fun And Dynamic.</h1>
-                    <ul class="entry-meta color-dark-1">
-                        <li class="post-author">
-                            by
-                            <a href="author.html">
-                                Admin
-                            </a>
-                        </li>
-                        <li>
-                            <i class="regular-calendar-01"></i>Oct 18, 2023
-                        </li>
-                        <li>
-                            <i class="regular-clock-circle"></i>2 min read
-                        </li>
-                        <li>
-                            <i class="regular-eye"></i>9k
-                        </li>
-                        <li>
-                            <i class="regular-chatting"></i>2 Comments
-                        </li>
-                    </ul>
-                    <div class="axil-social social-layout-1 size-small gap-12">
-                        <ul>
-                            <li class="facebook">
-                                <a aria-label="Learn more from Facebook" href="https://facebook.com/">
-                                    <i class="solid-facebook2"></i>
-                                </a>
-                            </li>
-                            <li class="instagram">
-                                <a aria-label="Learn more from Instagram" href="https://instagram.com/">
-                                    <i class="regular-instagram"></i>
-                                </a>
-                            </li>
-                            <li class="mail-fast">
-                                <a aria-label="Learn more from Mail fast" href="https://mail-fast.com/">
-                                    <i class="regular-mail-fast"></i>
-                                </a>
-                            </li>
-                            <li class="pinterest">
-                                <a aria-label="Learn more from Pinterest" href="https://pinterest.com/">
-                                    <i class="solid-pinterest-01"></i>
-                                </a>
-                            </li>
-                            <li class="youtube">
-                                <a aria-label="Learn more from Youtube" href="https://youtube.com/">
-                                    <i class="solid-youtube"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="mb-4 box-border-dark-1 radius-default transition-default">
-                        <div class="figure-holder img-height-100 radius-medium">
-                            <img width="1232" height="600" src="assets/media/blog/post111.webp" alt="Post">
-                        </div>
-                    </div>
-                </div>
-                <div class="row sticky-coloum-wrap">
-                    <div class="col-lg-8 sticky-coloum-item">
-                        <div class="single-blog-content content-layout1 pe-lg-4">
-                            <p>On August 15th, an alarming email popped up in the inbox of Diana Pearl, a New York-based news editor. Someone in Moscow had logged into her verified Twitter account, it said. Pearl was familiar with the email content’s theme as it resembled previous automated correspondence from Twitter — featuring a minimal white background, black text, and blue links.</p>
-                            <p>I’ve created a Team Health Check template based on the exercise I run with my teams. It’s super simple to use and above all, it’s light-hearted and enjoyable.</p>
-                            <p>It’s a guided experience, so you don’t need to prepare anything in advance other than setting aside 40 minutes with your team (for teams over six, I’d suggest an hour). By repeating the exercise over consecutive months your team can track the feels and compare results across exercises, Unlike a typical retrospective, the</p>
-                            <h4 class="h4-large">For Each Category, Your Team Needs To Cast Two Votes:</h4>
-                            <ul class="list-style-1">
-                                <li>How are you feeling right now? Confident or happy, indifferent or satisfied, concerned or
-                                    downbeat</li>
-                                <li>I find this prevents us from rabbit-holing? on topics thatConfident or happy, indifferent or
-                                    satisfied, concerned or downbeat</li>
-                            </ul>
-                            <p>Categories are time-bound. I find this prevents us from rabbit-holing on topics that could consume the entire session, instead, these are tabled for future conversations. With our challenges laid out on the table, the exercise encourages an outcomes-focused mindset to help us divine actions that contribute to removing hurdles, improving perceptions, and resolving conflicts.</p>
-                            <h4 class="h4-large">Stumbling, Twisting Or Slipping Are Responsible For Almost A New Joinee Post</h4>
-                            <p>Difficulties from the area of ​​tour planning (see Table 1) were represented several times among the 10 most common difficulties: poorer road conditions, tour cancellation, increased time requirement or a tour that was more difficult than expected. Orientation difficulties were also frequently</p>
-                            <figure class="figure-holder mb-3 radius-default img-height-100">
-                                <div class="row g-2">
-                                    <div class="col-6">
-                                        <div class="box-border-dark-1 radius-default transition-default">
-                                            <div class="figure-holder img-height-100 radius-medium">
-                                                <img width="630" height="500" src="assets/media/blog/post109.webp" alt="figure">
-                                            </div>
-                                        </div>
-                                        <div class="figure-caption text-center">A caption for the above image.</div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="box-border-dark-1 radius-default transition-default">
-                                            <div class="figure-holder img-height-100 radius-medium">
-                                                <img width="630" height="500" src="assets/media/blog/post110.webp" alt="figure">
-                                            </div>
-                                        </div>
-                                        <div class="figure-caption text-center">A caption for the above image.</div>
-                                    </div>
-                                </div>
-                            </figure>
-                            <p>Difficulties from the area of ​​tour planning (see Table 1) were represented several times among
-                                the 10 most common difficulties: poorer road conditions, tour cancellation, increased time
-                                requirement or a tour that was more difficult than expected. Orientation <span>difficulties were
-                                    also frequently</span></p>
-                            <blockquote>
-                                <p>I find this prevents us from rabbit-holing on topics that could consume the entire session. With the exercise encourages an outcomes-focused mindset to help us divine actions that contribute to removing hurdles.</p>
-                                <cite>Amy Amber</cite>
-                            </blockquote>
-                            <p>Categories are time-bound. I find this prevents us from rabbit-holing on topics that could
-                                consume the entire session, instead, these are tabled for future conversations. With our
-                                challenges laid out on the table, the exercise encourages an outcomes-focused mindset to help us
-                                divine actions </p>
-                            <h4 class="h4-large">Designed A Fun And Dynamic Hackout Event Poster For All The Colleges.</h4>
-                            <p>Difficulties from the area of ​​tour planning (see Table 1) were represented several times among
-                                the 10 most common difficulties: poorer more difficult than expected. Orientation difficulties
-                                were also frequently</p>
-                            <h4 class="h4-large">New Joinee Post Template</h4>
-                            <ul class="list-style-1">
-                                <li>Leave extra space between you and other cars</li>
-                                <li>Contrary to popular belief, Lorem Ipsum is not simply random text</li>
-                                <li>There are many variations of passages of Lorem Ipsum available</li>
-                                <li>you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything</li>
-                                <li>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum</li>
-                            </ul>
-                            <h4 class="h4-large">Designed A Fun And Dynamic Hackout Event Poster For All The Colleges.</h4>
-                            <p>Difficulties from the area of ​​tour planning (see Table 1) were represented several times among
-                                the 10 most common difficulties: poorer more difficult than expected. Orientation difficulties
-                                were also frequently. Meta submitted a request to dismiss the Federal Trade Commission's. Pearl
-                                was familiar with the email content’s theme as it resembled previous automated.</p>
-                            <p>On August 15th, an alarming email popped up in the inbox of Diana Pearl, a York-based news
-                                editor. Someone in Moscow had logged into her verified Twitter account, it said. Pearl was
-                                familiar with the email content’s theme as it resembled previous automated correspondence from
-                                Twitter — featuring a minimal white background, black text, and blue links.</p>
-                            <p>While the law might seem obvious, designers often engage in creative work where they try to
-                                reinvent the wheel for the sake of novelty. Of course, we as designers are tasked with providing
-                                clients and users with new and inventive solutions, but it is important to understand that there
-                                are inherent user expectations and mental models to which we should cater. </p>
-                            <div class="tag-share-wrap">
-                                <div class="tagcloud-wrap">
-                                    <h4 class="mb-2 h4-small">Tags:</h4>
-                                    <div class="tagcloud">
-                                        <a href="archive-layout1.html" class="tag-cloud-link">
-                                            <span class="icon-holder">
-                                                <i class="regular-taxi-1"></i>
-                                            </span>Travel
-                                        </a>
-                                        <a href="archive-layout1.html" class="tag-cloud-link">
-                                            <span class="icon-holder">
-                                                <i class="solid-interactive"></i>
-                                            </span>History
-                                        </a>
-                                        <a href="archive-layout1.html" class="tag-cloud-link">
-                                            <span class="icon-holder">
-                                                <i class="regular-shopping-basket2"></i>
-                                            </span>Fashion
-                                        </a>
-                                        <a href="archive-layout1.html" class="tag-cloud-link">
-                                            <span class="icon-holder">
-                                                <i class="regular-globe-stand"></i>
-                                            </span>World
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="share-wrap">
-                                    <h4 class="mb-2 h4-small">Share:</h4>
-                                    <div class="axil-social social-layout-1 size-large gap-12">
-                                        <ul>
-                                            <li class="facebook">
-                                                <a aria-label="Learn more from Facebook" href="https://facebook.com/">
-                                                    <i class="solid-facebook2"></i>
-                                                </a>
-                                            </li>
-                                            <li class="instagram">
-                                                <a aria-label="Learn more from Instagram" href="https://instagram.com/">
-                                                    <i class="regular-instagram"></i>
-                                                </a>
-                                            </li>
-                                            <li class="mail-fast">
-                                                <a aria-label="Learn more from Mail fast" href="https://mail-fast.com/">
-                                                    <i class="regular-mail-fast"></i>
-                                                </a>
-                                            </li>
-                                            <li class="pinterest">
-                                                <a aria-label="Learn more from Pinterest" href="https://pinterest.com/">
-                                                    <i class="solid-pinterest-01"></i>
-                                                </a>
-                                            </li>
-                                            <li class="youtube">
-                                                <a aria-label="Learn more from Youtube" href="https://youtube.com/">
-                                                    <i class="solid-youtube"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="author-wrap bg-color-mimosa">
-                                <div class="author-thumb img-height-100">
-                                    <img width="178" height="178" src="assets/media/blog/author.webp" alt="Author Figure">
-                                </div>
-                                <div class="author-content">
-                                    <h4 class="entry-title color-dark-1-fixed">Georges Embolo</h4>
-                                    <div class="author-designation">Lead Designer</div>
-                                    <p class="entry-description color-dark-1-fixed">While the law might seem obvious, designers often engage in creative work where they try to reinvent the wheel for the sake of novelty.</p>
-                                    <div class="axil-social social-layout-2 color-dark-1-fixed size-medium gap-12">
-                                        <ul>
-                                            <li class="pinterest">
-                                                <a aria-label="Learn more from Pinterest" href="https://pinterest.com/">
-                                                    <i class="regular-pinterest"></i>
-                                                </a>
-                                            </li>
-                                            <li class="instagram">
-                                                <a aria-label="Learn more from Instagram" href="https://instagram.com/">
-                                                    <i class="regular-instagram"></i>
-                                                </a>
-                                            </li>
-                                            <li class="twitter">
-                                                <a aria-label="Learn more from Twitter" href="https://twitter.com/">
-                                                    <i class="regular-tweeter"></i>
-                                                </a>
-                                            </li>
-                                            <li class="mail-fast">
-                                                <a aria-label="Learn more from Mail Fast" href="https://mail-fast.com/">
-                                                    <i class="regular-mail-fast"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post-navigation">
-                                <div class="post-box prev-post">
-                                    <div class="figure-holder">
-                                        <a href="post-format-default.html" class="link-wrap img-height-100"><img width="540" height="540" src="assets/media/blog/post60.webp" alt="Post"></a>
-                                    </div>
-                                    <div class="content-holder">
-                                        <a href="post-format-default.html" class="text-box prev-text">
-                                            <div class="icon-holder"><i class="regular-arrow-left"></i></div>Previous Post
-                                        </a>
-                                        <h3 class="entry-title h3-small color-dark-1 underline-animation"><a href="post-format-default.html" class="link-wrap">Underwater Exercise Is Used Strengthen Weak Muscles</a></h3>
-                                    </div>
-                                </div>
-                                <div class="post-box next-post">
-                                    <div class="figure-holder">
-                                        <a href="post-format-default.html" class="link-wrap img-height-100"><img width="540" height="540" src="assets/media/blog/post61.webp" alt="Post"></a>
-                                    </div>
-                                    <div class="content-holder">
-                                        <a href="post-format-default.html" class="text-box next-text">Next Post<div class="icon-holder"><i class="regular-arrow-right"></i></div></a>
-                                        <h3 class="entry-title h3-small color-dark-1 underline-animation"><a href="post-format-default.html" class="link-wrap">The Science Skin-car A Long Way But There’s Still</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="post-comment">
-                                <div class="section-heading heading-style-7">
-                                    <h3 class="title h3-regular">7 Comments</h3>
-                                </div>
-                                <ul class="comment-list">
-                                    <li>
-                                        <div class="each-comment">
-                                            <div class="comment-figure img-height-100">
-                                                <img width="500" height="500" src="assets/media/blog/post17.webp" alt="Comment">
-                                            </div>
-                                            <div class="comment-content">
-                                                <h4 class="comment-title">Naiska Haack</h4>
-                                                <div class="comment-meta"><span class="post-date">Oct 10, 2022</span></div>
-                                                <p class="comment-comment">Creative work where they try to reinvent the wheel for the sake of novelty, we as designers are tasked with providing clients and users with new and inventive solutions.</p>
-                                                <a href="#" class="item-btn">Reply</a>
-                                            </div>
-                                        </div>
-                                        <ul class="children">
-                                            <li>
-                                                <div class="each-comment">
-                                                    <div class="comment-figure img-height-100">
-                                                        <img width="500" height="500" src="assets/media/blog/post18.webp" alt="Comment">
-                                                    </div>
-                                                    <div class="comment-content">
-                                                        <h4 class="comment-title">Simmy Mack</h4>
-                                                        <div class="comment-meta"><span class="post-date">Oct 10, 2022</span></div>
-                                                        <p class="comment-comment">Creative work where they try to reinvent the wheel for the sake of novelty, we as designers are tasked with providing clients and users with new and inventive solutions.</p>
-                                                        <a href="#" class="item-btn">Reply</a>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <div class="each-comment">
-                                            <div class="comment-figure img-height-100">
-                                                <img width="500" height="500" src="assets/media/blog/post19.webp" alt="Comment">
-                                            </div>
-                                            <div class="comment-content">
-                                                <h4 class="comment-title">Arlene McCoy</h4>
-                                                <div class="comment-meta"><span class="post-date">Oct 10, 2022</span></div>
-                                                <p class="comment-comment">Creative work where they try to reinvent the wheel for the sake of novelty, we as designers are tasked with providing clients and users with new and inventive solutions.</p>
-                                                <a href="#" class="item-btn">Reply</a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="leave-comment">
-                                <div class="section-heading heading-style-7">
-                                    <h3 class="title h3-regular">Post A Comment</h3>
-                                </div>
-                                <p class="mb-4">Your email address will not be published. Required fields are marked *</p>
-                                <form class="leave-form-box">
-                                    <div class="row g-2">
-                                        <div class="col-md-6 form-group">
-                                            <input type="text" placeholder="Name" class="form-control" name="name" id="name" data-error="Name field is required" required>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                        <div class="col-md-6 form-group">
-                                            <input type="email" placeholder="Your E-mail*" class="form-control" name="email" id="leave-email" data-error="E-mail field is required" required>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                        <div class="col-12 form-group">
-                                            <input type="checkbox" id="show-message" name="show-message" value="Bike">
-                                            <label class="show-message-label" for="show-message">Don’t show this message again</label>
-                                        </div>
-                                        <div class="col-12 form-group">
-                                            <div class="section-heading heading-style-7">
-                                                <h3 class="title h3-regular">Leave a Reply</h3>
-                                            </div>
-                                            <textarea class="textarea form-control" placeholder="Message" name="message" id="leave-message" rows="5" cols="20" data-error="Message field is required" required></textarea>
-                                            <div class="help-block with-errors"></div>
-                                        </div>
-                                        <div class="col-12 form-group mt-2">
-                                            <button type="submit" data-toggle="modal" data-target="#exampleModalCenter" class="axil-btn axil-btn-fill btn-color-alter axil-btn-large"><span><span>Post
-                                                        Comment</span></span></button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 sticky-coloum-item">
-                        <div class="sidebar-global sidebar-layout4">
-                            <div class="sidebar-widget">
-                                <div class="widget-banner banner-layout1">
-                                    <div class="radius-default box-border-dark-1 img-height-100">
-                                        <div class="figure-holder radius-medium">
-                                            <img width="700" height="294" src="assets/media/banner/banner2.webp" alt="Banner">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        </div>
+        <div class="row sticky-coloum-wrap">
+            <div class="col-lg-8 sticky-coloum-item">
+                <div class="single-blog-content content-layout1 pe-lg-4">
+                    
+
+                    {{ post.content|safe }}
 
 
 
-                            
+                    <!-- Comments-->
 
-
-
-
-
-
-                            
-                            
-
-
-
-
-
-                            
-
-
-
-                            
-
-
-                            
-                        </div>
-                    </div>
                 </div>
             </div>
-        </section>
-        
+            
+
+            <!-- sidebar-->
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+           
+
+{% endblock 'content' %}
+
+<div class="tag-share-wrap">
+    <div class="tagcloud-wrap">
+        <h4 class="mb-2 h4-small">Tags:</h4>
+        <div class="tagcloud">
+            <a href="archive-layout1.html" class="tag-cloud-link">
+                <span class="icon-holder">
+                    <i class="regular-taxi-1"></i>
+                </span>Travel
+            </a>
+            <a href="archive-layout1.html" class="tag-cloud-link">
+                <span class="icon-holder">
+                    <i class="solid-interactive"></i>
+                </span>History
+            </a>
+            <a href="archive-layout1.html" class="tag-cloud-link">
+                <span class="icon-holder">
+                    <i class="regular-shopping-basket2"></i>
+                </span>Fashion
+            </a>
+            <a href="archive-layout1.html" class="tag-cloud-link">
+                <span class="icon-holder">
+                    <i class="regular-globe-stand"></i>
+                </span>World
+            </a>
+        </div>
+    </div>
+    <div class="share-wrap">
+        <h4 class="mb-2 h4-small">Share:</h4>
+        <div class="axil-social social-layout-1 size-large gap-12">
+            <ul>
+                <li class="facebook">
+                    <a aria-label="Learn more from Facebook" href="https://facebook.com/">
+                        <i class="solid-facebook2"></i>
+                    </a>
+                </li>
+                <li class="instagram">
+                    <a aria-label="Learn more from Instagram" href="https://instagram.com/">
+                        <i class="regular-instagram"></i>
+                    </a>
+                </li>
+                <li class="mail-fast">
+                    <a aria-label="Learn more from Mail fast" href="https://mail-fast.com/">
+                        <i class="regular-mail-fast"></i>
+                    </a>
+                </li>
+                <li class="pinterest">
+                    <a aria-label="Learn more from Pinterest" href="https://pinterest.com/">
+                        <i class="solid-pinterest-01"></i>
+                    </a>
+                </li>
+                <li class="youtube">
+                    <a aria-label="Learn more from Youtube" href="https://youtube.com/">
+                        <i class="solid-youtube"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="author-wrap bg-color-mimosa">
+    <div class="author-thumb img-height-100">
+        <img width="178" height="178" src="assets/media/blog/author.webp" alt="Author Figure">
+    </div>
+    <div class="author-content">
+        <h4 class="entry-title color-dark-1-fixed">Georges Embolo</h4>
+        <div class="author-designation">Lead Designer</div>
+        <p class="entry-description color-dark-1-fixed">While the law might seem obvious, designers often engage in creative work where they try to reinvent the wheel for the sake of novelty.</p>
+        <div class="axil-social social-layout-2 color-dark-1-fixed size-medium gap-12">
+            <ul>
+                <li class="pinterest">
+                    <a aria-label="Learn more from Pinterest" href="https://pinterest.com/">
+                        <i class="regular-pinterest"></i>
+                    </a>
+                </li>
+                <li class="instagram">
+                    <a aria-label="Learn more from Instagram" href="https://instagram.com/">
+                        <i class="regular-instagram"></i>
+                    </a>
+                </li>
+                <li class="twitter">
+                    <a aria-label="Learn more from Twitter" href="https://twitter.com/">
+                        <i class="regular-tweeter"></i>
+                    </a>
+                </li>
+                <li class="mail-fast">
+                    <a aria-label="Learn more from Mail Fast" href="https://mail-fast.com/">
+                        <i class="regular-mail-fast"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="post-navigation">
+    <div class="post-box prev-post">
+        <div class="figure-holder">
+            <a href="post-format-default.html" class="link-wrap img-height-100"><img width="540" height="540" src="assets/media/blog/post60.webp" alt="Post"></a>
+        </div>
+        <div class="content-holder">
+            <a href="post-format-default.html" class="text-box prev-text">
+                <div class="icon-holder"><i class="regular-arrow-left"></i></div>Previous Post
+            </a>
+            <h3 class="entry-title h3-small color-dark-1 underline-animation"><a href="post-format-default.html" class="link-wrap">Underwater Exercise Is Used Strengthen Weak Muscles</a></h3>
+        </div>
+    </div>
+    <div class="post-box next-post">
+        <div class="figure-holder">
+            <a href="post-format-default.html" class="link-wrap img-height-100"><img width="540" height="540" src="assets/media/blog/post61.webp" alt="Post"></a>
+        </div>
+        <div class="content-holder">
+            <a href="post-format-default.html" class="text-box next-text">Next Post<div class="icon-holder"><i class="regular-arrow-right"></i></div></a>
+            <h3 class="entry-title h3-small color-dark-1 underline-animation"><a href="post-format-default.html" class="link-wrap">The Science Skin-car A Long Way But There’s Still</a></h3>
+        </div>
+    </div>
+</div>
