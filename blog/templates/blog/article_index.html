@@ -1,0 +1,51 @@
+{% extends "share_layout/base.html" %}
+{% load static %}
+{% block content %}
+
+    {% include "share_layout/head_area.html" %}
+
+
+        <!--=====================================-->
+        <!--=       breadcrumb Area Start       =-->
+        <!--=====================================-->
+        <section class="breadcrumb-wrap-layout1 bg-color-old-lace">
+            <div class="container">
+                <div class="breadcrumb-layout1">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Single Blog</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </section>
+        <!--=====================================-->
+        <!--=          Post Area Start          =-->
+        <!--=====================================-->
+        <section class="space-top-60 space-bottom-60 single-blog-wrap1 bg-color-light-1 transition-default">
+            <div class="container">
+                <div class="row sticky-coloum-wrap">
+                    <div class="col-lg-8 sticky-coloum-item">
+
+                        {% include "article_detail.html" %}
+
+                    </div>
+
+                            <!--=====================================-->
+                            <!--=          sidebar                  =-->
+                            <!--=====================================-->
+                    <div class="col-lg-4 sticky-coloum-item">
+                        <div class="sidebar-global sidebar-layout4">
+                            
+
+
+                        </div>
+                    </div>    
+
+
+                </div>
+            </div>
+        </section>
+
+{% endblock %}

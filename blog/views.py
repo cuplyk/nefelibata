@@ -23,7 +23,7 @@ class IndexFirstListView(TemplateView):
 
 class ArticleDetailViews(DetailView):
     model = Post
-    template_name = 'blog/articles/article_detail.html'
+    template_name = 'blog/article_index.html'
     context_object_name = 'post'
     slug_field = 'slug'
     slug_url_kwarg = 'slug'
