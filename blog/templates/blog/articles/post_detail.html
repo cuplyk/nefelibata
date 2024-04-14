@@ -1,8 +1,6 @@
 {% load static %}
 
-{% from django import template %}
 
-{% with markdown2.markdown as render_markdown %}
 
 <!--=====================================-->
 <!--=          Post Area Start          =-->
@@ -34,11 +32,10 @@
         </div>
     </div>
 
-    {{ post.content|render_markdown|safe }}
+    {{ post.content|safe|linebreaks }}
 
    {% include "blog/article_layout/article_tags_and_share.html" %}
    {% include "blog/article_layout/article_author.html" %}
    {% include "blog/article_layout/article_prev_next_post.html" %}
 
 </div>
-{% endwith %}
