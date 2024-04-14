@@ -1,6 +1,6 @@
 {% load static %}
 
-
+{% load markdown_extras %}
 
 <!--=====================================-->
 <!--=          Post Area Start          =-->
@@ -32,7 +32,7 @@
         </div>
     </div>
 
-    {{ post.content|safe|linebreaks }}
+    {{ post.content|render_markdown|safe|linebreaks }}
 
    {% include "blog/article_layout/article_tags_and_share.html" %}
    {% include "blog/article_layout/article_author.html" %}
