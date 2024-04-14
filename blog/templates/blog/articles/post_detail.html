@@ -32,7 +32,7 @@
         </div>
     </div>
 
-    {{ post.content|render_markdown|safe|linebreaks }}
+    {{ post.content|render_markdown|safe }}
 
    {% include "blog/article_layout/article_tags_and_share.html" %}
    {% include "blog/article_layout/article_author.html" %}
