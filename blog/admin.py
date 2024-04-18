@@ -5,6 +5,8 @@ from django.db import models
 from mdeditor.widgets import MDEditorWidget
 from mdeditor.fields import MDTextField
 
+from tinymce.widgets import TinyMCE
+
 
 
 # Configurate the admin page
@@ -14,7 +16,7 @@ from mdeditor.fields import MDTextField
 class TagAdmin(admin.ModelAdmin):
     pass
 
-class PostAdmin(admin.ModelAdmin):
+"""class PostAdmin(admin.ModelAdmin):
     formfield_overrides = {
         models.TextField: {'widget': MDEditorWidget}
     }
@@ -27,14 +29,24 @@ class PostAdmin(admin.ModelAdmin):
     list_filter = ('status', 'created_on')  # Add filters for status and created_on fields
     search_fields = ('title', 'content')  # Add search functionality for title and content fields
     prepopulated_fields = {'slug': ('title',)}  # Automatically generate slug based on the title
-
+"""
 
 class CommentAdmin(admin.ModelAdmin):
     pass
 
 
 
+class TinymcePostAdmin(admin.ModelAdmin):
+    formfield_overrides = {
+        models.TextField: {'widget': TinyMCE(attrs={'cols': 80, 'rows': 30})}
+    }
+    list_display = ('title', 'author', 'created_on', 'status')  # Define fields to display in the list view
+    list_filter = ('status', 'created_on')  # Add filters for status and created_on fields
+    search_fields = ('title', 'content')  # Add search functionality for title and content fields
+    prepopulated_fields = {'slug': ('title',)}  # Automatically generate slug based on the title
 
-admin.site.register(Post, PostAdmin)
+
+
+admin.site.register(Post, TinymcePostAdmin)
 admin.site.register(Tag, TagAdmin)
 admin.site.register(Comment, CommentAdmin)
