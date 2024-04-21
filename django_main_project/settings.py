@@ -291,16 +291,21 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 
 TINYMCE_DEFAULT_CONFIG = {
-    'height': 360,
-    'width': 900,
-    'menubar': True,
-    'plugins': 'autolink lists link image charmap print preview anchor',
-    'toolbar': 'undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
-    'toolbar_location': 'bottom',
-    'statusbar': True,
-    'content_css': 'path/to/your/custom.css',
-    
+    "height": "320px",
+    "width": "960px",
+    "menubar": "file edit view insert format tools table help",
+    "plugins": "advlist autolink lists link image charmap print preview anchor searchreplace visualblocks code "
+    "fullscreen insertdatetime media table paste code help wordcount spellchecker",
+    "toolbar": "undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft "
+    "aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor "
+    "backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | "
+    "fullscreen  preview save print | insertfile image media pageembed template link anchor codesample | "
+    "a11ycheck ltr rtl | showcomments addcomment code",
+    "custom_undo_redo_levels": 10,
 }
+TINYMCE_SPELLCHECKER = True
+
+
 
 
 # Customize the toolbar buttons and options

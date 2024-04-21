@@ -2,6 +2,9 @@
 {% load static %}
 {% block content %}
 
+
+
+
     {% include "share_layout/head_area.html" %}
     
 
@@ -31,154 +34,43 @@
                     <div class="pe-lg-4">
                         <div class="box-border-dark-1 padding-20 bg-color-old-lace radius-default">
                             <div class="row g-3 child-bottom-border color-dark-1-fixed">
+                                {% for post in posts %}
                                 <div class="col-12">
                                     <div class="post-box-layout9 get-border figure-scale-animation">
                                         <div class="figure-holder radius-default">
-                                            <a href="post-format-default.html" class="link-wrap img-height-100"><img width="500" height="500" src="assets/media/blog/post62.webp" alt="Post"></a>
+                                            <a href="{{ post.get_absolute_url }}" class="link-wrap img-height-100">
+                                                <img width="500" height="500" src="{{ post.image.url }}" alt="{{ post.title }}">
+                                            </a>
                                         </div>
                                         <div class="content-holder">
                                             <div>
                                                 <div class="entry-category style-2 color-dark-1-fixed">
                                                     <ul>
-                                                        <li>
-                                                            <a href="archive-layout1.html">FASHION</a>
-                                                        </li>
+                                                        <li><a href="{{ post.category.get_absolute_url }}">{{ post.category }}</a></li>
                                                     </ul>
                                                 </div>
-                                                <h3 class="entry-title color-dark-1-fixed underline-animation"><a href="post-format-default.html" class="link-wrap">Underwater
-                                                        Exercise Is Used Strengthen Weak Muscles</a></h3>
-                                                <p class="entry-description color-dark-1-fixed">Nam eget lorem mattis,
-                                                    consequat felis quis, luctus augue. Aenean ac iaculis enim.</p>
+                                                <h3 class="entry-title color-dark-1-fixed underline-animation"><a href="{{ post.get_absolute_url }}" class="link-wrap">{{ post.title }}</a></h3>
+                                                <p class="entry-description color-dark-1-fixed">{{ post.content|truncatechars:150 }}</p>
                                                 <ul class="entry-meta color-dark-1-fixed">
                                                     <li class="post-author">
-                                                        <a href="author.html">
-                                                            <img src="assets/media/blog/profile2.webp" alt="Author">
-                                                            Sergio Pliego
+                                                        <a href="{{ post.author.get_absolute_url }}">
+                                                            <img src="{{ post.author.profile_picture.url }}" alt="Author">
+                                                            {{ post.author }}
                                                         </a>
                                                     </li>
-                                                    <li>
-                                                        <i class="regular-clock-circle"></i>5 min read
-                                                    </li>
-                                                    <li>
-                                                        <i class="regular-eye"></i>9k
-                                                    </li>
+                                                    <li><i class="regular-clock-circle"></i>{{ post.read_time }} min read</li>
+                                                    <li><i class="regular-eye"></i>{{ post.views }} views</li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12">
-                                    <div class="post-box-layout9 get-border figure-scale-animation">
-                                        <div class="figure-holder radius-default">
-                                            <a href="post-format-default.html" class="link-wrap img-height-100"><img width="500" height="500" src="assets/media/blog/post63.webp" alt="Post"></a>
-                                        </div>
-                                        <div class="content-holder">
-                                            <div>
-                                                <div class="entry-category style-2 color-dark-1-fixed">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="archive-layout1.html">TECH</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <h3 class="entry-title color-dark-1-fixed underline-animation"><a href="post-format-default.html" class="link-wrap">Smarter Food
-                                                        Choices 101 Tips For Busy Women</a></h3>
-                                                <p class="entry-description color-dark-1-fixed">Nam eget lorem mattis,
-                                                    consequat felis quis, luctus augue. Aenean ac iaculis enim.</p>
-                                                <ul class="entry-meta color-dark-1-fixed">
-                                                    <li class="post-author">
-                                                        <a href="author.html">
-                                                            <img src="assets/media/blog/profile3.webp" alt="Author">
-                                                            Kristin Watson
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <i class="regular-clock-circle"></i>6 min read
-                                                    </li>
-                                                    <li>
-                                                        <i class="regular-eye"></i>9k
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="post-box-layout9 get-border figure-scale-animation">
-                                        <div class="figure-holder radius-default">
-                                            <a href="post-format-default.html" class="link-wrap img-height-100"><img width="500" height="500" src="assets/media/blog/post64.webp" alt="Post"></a>
-                                        </div>
-                                        <div class="content-holder">
-                                            <div>
-                                                <div class="entry-category style-2 color-dark-1-fixed">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="archive-layout1.html">FOOD</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <h3 class="entry-title color-dark-1-fixed underline-animation"><a href="post-format-default.html" class="link-wrap">Virtual Reality
-                                                        (VR), The Use Computer Modeling</a></h3>
-                                                <p class="entry-description color-dark-1-fixed">Nam eget lorem mattis,
-                                                    consequat felis quis, luctus augue. Aenean ac iaculis enim.</p>
-                                                <ul class="entry-meta color-dark-1-fixed">
-                                                    <li class="post-author">
-                                                        <a href="author.html">
-                                                            <img src="assets/media/blog/profile4.webp" alt="Author">
-                                                            Jenny Wilson
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <i class="regular-clock-circle"></i>9 min read
-                                                    </li>
-                                                    <li>
-                                                        <i class="regular-eye"></i>9k
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="post-box-layout9 get-border figure-scale-animation">
-                                        <div class="figure-holder radius-default">
-                                            <a href="post-format-default.html" class="link-wrap img-height-100"><img width="500" height="500" src="assets/media/blog/post65.webp" alt="Post"></a>
-                                        </div>
-                                        <div class="content-holder">
-                                            <div>
-                                                <div class="entry-category style-2 color-dark-1-fixed">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="archive-layout1.html">HEALTH</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <h3 class="entry-title color-dark-1-fixed underline-animation"><a href="post-format-default.html" class="link-wrap">Reality Hosting,
-                                                        The Use Computer Modeling Moderation</a></h3>
-                                                <p class="entry-description color-dark-1-fixed">Nam eget lorem mattis,
-                                                    consequat felis quis, luctus augue. Aenean ac iaculis enim.</p>
-                                                <ul class="entry-meta color-dark-1-fixed">
-                                                    <li class="post-author">
-                                                        <a href="author.html">
-                                                            <img src="assets/media/blog/profile5.webp" alt="Author">
-                                                            Esther Howard
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <i class="regular-clock-circle"></i>3 min read
-                                                    </li>
-                                                    <li>
-                                                        <i class="regular-eye"></i>9k
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-lg-4 sticky-coloum-item">
                     <div class="sidebar-global sidebar-layout2">
                         <div class="sidebar-widget">

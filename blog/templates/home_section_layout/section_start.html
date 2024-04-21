@@ -47,7 +47,7 @@
                                         <h3 class="entry-title h3-extra-large color-dark-1-fixed underline-animation">
                                             <a href="#" class="link-wrap">{{ post.title }}</a>
                                         </h3>
-                                        <p class="entry-description color-dark-1-fixed">{{ post.content|truncatechars:150 }}</p>
+                                        <p class="entry-description color-dark-1-fixed">{{ post.content|truncatechars:150|safe }}</p>
                                         <ul class="entry-meta color-dark-1-fixed">
                                             <li class="post-author">
                                                 <a href="#">
