@@ -1,10 +1,9 @@
-from typing import Any
 from django.db.models.base import Model as Model
-from django.db.models.query import QuerySet
 from django.shortcuts import render
-from django.http import HttpResponse
 from .models import Post
 from django.shortcuts import get_list_or_404, get_object_or_404
+from .utils import calculate_reading_time
+from django.views.generic import TemplateView
 
 from django.views.generic import TemplateView, DetailView
 # Create your views here.
@@ -15,8 +14,14 @@ class IndexFirstListView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['posts'] = Post.objects.order_by('-created_on')[:4]
+        # Fetch the latest posts
+        latest_posts = Post.objects.order_by('-created_on')[:4]
         
+        # Calculate reading time for each post
+        for post in latest_posts:
+            post.reading_time = calculate_reading_time(post.content)
+
+        context['posts'] = latest_posts  # Assign the calculated posts to the context
         return context
     
 

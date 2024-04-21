@@ -29,6 +29,7 @@ class Post(models.Model):
     image = models.ImageField(upload_to='post_images/', null=True, blank=True)  
     updated_on = models.DateTimeField(auto_now=True)
     created_on = models.DateTimeField(auto_now_add=True)
+    reading_time = models.IntegerField(default=0)
 
     class Meta:
         ordering = ['-created_on']
