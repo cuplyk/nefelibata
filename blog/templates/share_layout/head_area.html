@@ -1,25 +1,24 @@
 {% load static %}
-<header class="header header1 sticky-on">
+<header class="header header2 sticky-on">
 
-    {% include "share_layout/essential/topbar_breaking.html" %}
+    {% include "share_layout/essential/modern_topbar_breaking.html" %}
 
     <div id="sticky-placeholder"></div>
     <div id="navbar-wrap" class="navbar-wrap">
-        <div class="container">
+        <div class="container-fluid">
             <div class="d-flex align-items-center justify-content-between">
-                <div class="d-md-block d-none">
-                    <a href="index.html" class="link-wrap desktop-logo img-height-100" aria-label="Site Logo"><img width="131" height="47" src="{% static "media/logo.svg" %}" alt="logo"></a>
-                </div>
-                <div class="d-md-none d-block">
-                    <a href="index.html" class="link-wrap mobile-logo img-height-100" aria-label="Site Logo"><img width="86" height="31" src="{% static "media/logo.svg" %}" alt="logo"></a>
+                <div class="logo-holder">
+                    <div class="d-md-block d-none">
+                        <a href="index.html" class="link-wrap desktop-logo img-height-100" aria-label="Site Logo"><img width="131" height="47" src="{% static "media/logo-dark.svg" %}" alt="logo"></a>
+                    </div>
+                    <div class="d-md-none d-block">
+                        <a href="index.html" class="link-wrap mobile-logo img-height-100" aria-label="Site Logo"><img width="86" height="31" src="{% static "media/mobile-logo.svg" %}" alt="logo"></a>
+                    </div>
                 </div>
                 <!-- Start Mainmenu Nav just the navbar with the logo and templates -->
 
-                    {% include "share_layout/essential/start_main_navbar.html" %}
+                    {% include "share_layout/essential/modern_main_navbar.html" %}
 
-                <!-- End Mainmanu Nav profile and signout -->
-                
-                    {% include "share_layout/essential/end_main_navbar.html" %}
             </div>
         </div>
     </div>

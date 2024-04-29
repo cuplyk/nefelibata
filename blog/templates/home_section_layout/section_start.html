@@ -23,7 +23,7 @@
                         {% for post in posts %}
                         <div class="tab-pane fade h-100 {% if forloop.first %}show active{% endif %}" id="post-{{ forloop.counter }}">
                             <!--cycle template tag to cycle through different background colors-->
-                            <div class="post-box-layout13 box-border-dark-1 radius-default padding-20 bg-color-{% cycle 'scandal' 'mimosa' 'selago' 'old-lace' %} box-shadow-large shadow-style-2 transition-default">
+                            <div class="post-box-layout13 radius-default padding-20 bg-color-{% cycle 'scandal' 'mimosa' 'selago' 'old-lace' %} box-shadow-large shadow-style-2 transition-default">
                                 <div class="figure-holder radius-default">
                                     <a href="#" class="link-wrap img-height-100">
                                         {% if post.image and post.image.url %}
