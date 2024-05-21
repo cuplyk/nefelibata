@@ -6,7 +6,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     #prova
-    path("", IndexFirstListView.as_view(), name='home.html' ),
+    path("", IndexFirstListView.as_view(), name='home' ),
     path('image-test/', image_test_view, name='image_test'),
     path('arcticle/<slug:slug>/', ArticleDetailViews.as_view(), name='article_detail')
     

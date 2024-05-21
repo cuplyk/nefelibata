@@ -10,6 +10,7 @@ STATUS_CHOICES = (
 
 class Tag(models.Model):
     name = models.CharField(max_length=100, unique=True)
+    icon = models.ImageField(upload_to='tag_icons/', blank=True, null=True)
 
     #class to control the plural name of the class
     class Meta:
