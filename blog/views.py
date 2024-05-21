@@ -1,6 +1,6 @@
 from django.db.models.base import Model as Model
 from django.shortcuts import render
-from .models import Post
+from .models import Post, Tag
 from django.shortcuts import get_list_or_404, get_object_or_404
 from .utils import calculate_reading_time
 from django.views.generic import TemplateView
@@ -22,6 +22,10 @@ class IndexFirstListView(TemplateView):
             post.reading_time = calculate_reading_time(post.content)
 
         context['posts'] = latest_posts  # Assign the calculated posts to the context
+
+        # Fetch all tags
+        tags = Tag.objects.all()
+        context['tags'] = tags  # Assign tags to the context
         return context
     
 
@@ -36,6 +40,13 @@ class ArticleDetailViews(DetailView):
     def get_object(self, queryset=None):
         slug = self.kwargs.get(self.slug_url_kwarg)
         return get_object_or_404(self.model, slug=slug)
+
+
+def archive_layout(request, tag_name):
+    tag = get_object_or_404(Tag, name=tag_name)
+    posts = Post.objects.filter(tags=tag)
+    return render(request, 'blog/article_layout/article_author.html', {'posts': posts, 'tag': tag})
+
 
 
 

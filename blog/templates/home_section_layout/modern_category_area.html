@@ -1,4 +1,4 @@
-{% load static %}   
+{% load static %}
 
 <!--=====================================-->
 <!--=        Category Area Start        =-->
@@ -7,104 +7,28 @@
     <div class="container">
         <div class="position-relative">
             <div id="category-slider-2" class="category-slider-2 gutter-30 initially-none">
+                {% for tag in tags %}
                 <div class="single-slide">
                     <div class="category-box-layout2 figure-scale-animation">
                         <div class="figure-holder radius-default">
-                            <a href="archive-layout1.html" class="link-wrap img-height-100"><img width="180" height="130" src="assets/media/category/ctg4.webp" alt="Category"></a>
+                            <a href="{% url 'archive-layout' tag.name %}" class="link-wrap img-height-100">
+                                {% if tag.icon %}
+                                    <img width="180" height="130" src="{{ tag.icon.url }}" alt="{{ tag.name }}">
+                                {% else %}
+                                    <img width="180" height="130" src="{% static 'assets/media/category/default.webp' %}" alt="Default Image">
+                                {% endif %}
+                            </a>
                             <div class="entry-category style-4 color-dark-1-fixed">
                                 <ul>
                                     <li>
-                                        <a href="archive-layout1.html">TRAVEL</a>
+                                        <a href="{% url 'archive-layout' tag.name %}">{{ tag.name }}</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="single-slide">
-                    <div class="category-box-layout2 figure-scale-animation">
-                        <div class="figure-holder radius-default">
-                            <a href="archive-layout1.html" class="link-wrap img-height-100"><img width="180" height="130" src="assets/media/category/ctg5.webp" alt="Category"></a>
-                            <div class="entry-category style-4 color-dark-1-fixed">
-                                <ul>
-                                    <li>
-                                        <a href="archive-layout1.html">LIFESTYLE</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-slide">
-                    <div class="category-box-layout2 figure-scale-animation">
-                        <div class="figure-holder radius-default">
-                            <a href="archive-layout1.html" class="link-wrap img-height-100"><img width="180" height="130" src="assets/media/category/ctg6.webp" alt="Category"></a>
-                            <div class="entry-category style-4 color-dark-1-fixed">
-                                <ul>
-                                    <li>
-                                        <a href="archive-layout1.html">HEALTH</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-slide">
-                    <div class="category-box-layout2 figure-scale-animation">
-                        <div class="figure-holder radius-default">
-                            <a href="archive-layout1.html" class="link-wrap img-height-100"><img width="180" height="130" src="assets/media/category/ctg7.webp" alt="Category"></a>
-                            <div class="entry-category style-4 color-dark-1-fixed">
-                                <ul>
-                                    <li>
-                                        <a href="archive-layout1.html">TECH</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-slide">
-                    <div class="category-box-layout2 figure-scale-animation">
-                        <div class="figure-holder radius-default">
-                            <a href="archive-layout1.html" class="link-wrap img-height-100"><img width="180" height="130" src="assets/media/category/ctg8.webp" alt="Category"></a>
-                            <div class="entry-category style-4 color-dark-1-fixed">
-                                <ul>
-                                    <li>
-                                        <a href="archive-layout1.html">BUSINESS</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-slide">
-                    <div class="category-box-layout2 figure-scale-animation">
-                        <div class="figure-holder radius-default">
-                            <a href="archive-layout1.html" class="link-wrap img-height-100"><img width="180" height="130" src="assets/media/category/ctg9.webp" alt="Category"></a>
-                            <div class="entry-category style-4 color-dark-1-fixed">
-                                <ul>
-                                    <li>
-                                        <a href="archive-layout1.html">DESIGN</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-slide">
-                    <div class="category-box-layout2 figure-scale-animation">
-                        <div class="figure-holder radius-default">
-                            <a href="archive-layout1.html" class="link-wrap img-height-100"><img width="180" height="130" src="assets/media/category/ctg10.webp" alt="Category"></a>
-                            <div class="entry-category style-4 color-dark-1-fixed">
-                                <ul>
-                                    <li>
-                                        <a href="archive-layout1.html">TECNOLOGY</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
             <ul class="slider-navigation-layout1 color-light-1 position-layout2">
                 <li id="category-prev2" class="prev"><i class="regular-arrow-left"></i></li>
