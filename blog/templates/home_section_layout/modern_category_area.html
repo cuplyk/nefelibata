@@ -11,7 +11,7 @@
                 <div class="single-slide">
                     <div class="category-box-layout2 figure-scale-animation">
                         <div class="figure-holder radius-default">
-                            <a href="{% url 'archive-layout' tag.name %}" class="link-wrap img-height-100">
+                            <a href="{% url 'archive_layout' tag.name %}" class="link-wrap img-height-100">
                                 {% if tag.icon %}
                                     <img width="180" height="130" src="{{ tag.icon.url }}" alt="{{ tag.name }}">
                                 {% else %}
@@ -21,7 +21,7 @@
                             <div class="entry-category style-4 color-dark-1-fixed">
                                 <ul>
                                     <li>
-                                        <a href="{% url 'archive-layout' tag.name %}">{{ tag.name }}</a>
+                                        <a href="{% url 'archive_layout' tag.name %}">{{ tag.name }}</a>
                                     </li>
                                 </ul>
                             </div>

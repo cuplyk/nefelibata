@@ -9,10 +9,10 @@
             <div class="d-flex align-items-center justify-content-between">
                 <div class="logo-holder">
                     <div class="d-md-block d-none">
-                        <a href="index.html" class="link-wrap desktop-logo img-height-100" aria-label="Site Logo"><img width="131" height="47" src="{% static "media/logo-dark.svg" %}" alt="logo"></a>
+                        <a href="{% url 'home' %}" class="link-wrap desktop-logo img-height-100" aria-label="Site Logo"><img width="131" height="47" src="{% static "media/logo-dark.svg" %}" alt="logo"></a>
                     </div>
                     <div class="d-md-none d-block">
-                        <a href="index.html" class="link-wrap mobile-logo img-height-100" aria-label="Site Logo"><img width="86" height="31" src="{% static "media/mobile-logo.svg" %}" alt="logo"></a>
+                        <a href="{% url 'home' %}" class="link-wrap mobile-logo img-height-100" aria-label="Site Logo"><img width="86" height="31" src="{% static "media/mobile-logo.svg" %}" alt="logo"></a>
                     </div>
                 </div>
                 <!-- Start Mainmenu Nav just the navbar with the logo and templates -->

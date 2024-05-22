@@ -11,7 +11,7 @@ urlpatterns = [
     path("", IndexFirstListView.as_view(), name='home' ),
     path('image-test/', image_test_view, name='image_test'),
     path('arcticle/<slug:slug>/', ArticleDetailViews.as_view(), name='article_detail'),
-    path('archive/<str:tag_name>/', views.archive_layout, name='archive-layout'),
+    path('archive/<str:tag_name>/', views.archive_layout, name='archive_layout'),
     
 ]
 

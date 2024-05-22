@@ -1,3 +1,4 @@
+from typing import Any
 from django.db.models.base import Model as Model
 from django.shortcuts import render
 from .models import Post, Tag
@@ -16,6 +17,7 @@ class IndexFirstListView(TemplateView):
         context = super().get_context_data(**kwargs)
         # Fetch the latest posts
         latest_posts = Post.objects.order_by('-created_on')[:4]
+        most_viewed_posts = Post.objects.order_by('-views_count')[:3]
         
         # Calculate reading time for each post
         for post in latest_posts:
@@ -26,6 +28,10 @@ class IndexFirstListView(TemplateView):
         # Fetch all tags
         tags = Tag.objects.all()
         context['tags'] = tags  # Assign tags to the context
+
+        # Fetch the most viewed posts
+        context['posts'] = latest_posts # Assign the latest posts to the context
+        context['most_viewed_posts'] = most_viewed_posts
         return context
     
 
@@ -38,8 +44,43 @@ class ArticleDetailViews(DetailView):
     slug_url_kwarg = 'slug'
 
     def get_object(self, queryset=None):
-        slug = self.kwargs.get(self.slug_url_kwarg)
-        return get_object_or_404(self.model, slug=slug)
+        # Get the post object based on the slug
+        post = get_object_or_404(Post, slug=self.kwargs[self.slug_url_kwarg])
+        
+        # Increment the views count
+        post.views_count += 1
+        post.save()
+
+        # Calculate and set the reading time
+        post.reading_time = calculate_reading_time(post.content)
+        
+        return post
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # Ensure reading_time is available in the context
+        context['reading_time'] = self.object.reading_time
+        return context
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 def archive_layout(request, tag_name):
