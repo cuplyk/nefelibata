@@ -7,7 +7,7 @@
                 <div class="col-lg-3 col-12 order-lg-2">
                     <div class="d-flex align-items-center h-100">
                         <ul class="nav nav-tabs">
-                            <!-- if forloop.first  template tag to mark the first post's link and tab content as active by default.-->
+                            <!-- if forloop.first template tag to mark the first post's link and tab content as active by default. -->
                             {% for post in posts %}
                             <li class="nav-item">
                                 <a class="nav-link {% if forloop.first %}active{% endif %}" data-bs-toggle="tab" href="#post-{{ forloop.counter }}">
@@ -22,12 +22,12 @@
                     <div class="tab-content h-100">
                         {% for post in posts %}
                         <div class="tab-pane fade h-100 {% if forloop.first %}show active{% endif %}" id="post-{{ forloop.counter }}">
-                            <!--cycle template tag to cycle through different background colors-->
+                            <!-- cycle template tag to cycle through different background colors -->
                             <div class="post-box-layout13 radius-default padding-20 bg-color-{% cycle 'scandal' 'mimosa' 'selago' 'old-lace' %} box-shadow-large shadow-style-2 transition-default">
                                 <div class="figure-holder radius-default">
-                                    <a href="#" class="link-wrap img-height-100">
+                                    <a href="{% url 'article_detail' slug=post.slug %}" class="link-wrap img-height-100">
                                         {% if post.image and post.image.url %}
-                                        <img width="660" height="596" src="{{ post.image.url }}" alt="{{ post.title }}"><!-- 404 error-->
+                                        <img width="660" height="596" src="{{ post.image.url }}" alt="{{ post.title }}">
                                         {% else %}
                                         <img width="660" height="596" src="{% static 'media/post_images/photoyoutube.jpg' %}" alt="{{ post.title }}">
                                         {% endif %}
@@ -45,7 +45,7 @@
                                             </ul>
                                         </div>
                                         <h3 class="entry-title h3-extra-large color-dark-1-fixed underline-animation">
-                                            <a href="#" class="link-wrap">{{ post.title }}</a>
+                                            <a href="{% url 'article_detail' slug=post.slug %}" class="link-wrap">{{ post.title }}</a>
                                         </h3>
                                         <p class="entry-description color-dark-1-fixed">{{ post.content|truncatechars:150|safe }}</p>
                                         <ul class="entry-meta color-dark-1-fixed">
