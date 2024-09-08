@@ -10,6 +10,12 @@ from django.views.generic import TemplateView, DetailView
 # Create your views here.
 
 
+
+def post_format_default(request):
+    return render(request, 'blog/post-format-default.html')
+
+
+
 class IndexFirstListView(TemplateView):
     template_name = 'blog/blog_index.html'
 

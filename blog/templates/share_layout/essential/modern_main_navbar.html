@@ -13,15 +13,6 @@
 
     <nav id="dropdown" class="template-main-menu">
         <ul class="menu">
-            <li class="menu-item menu-item-has-children">
-                <a href="{% url 'home' %}">Home</a>
-                <ul class="sub-menu">
-                    <li class="menu-item"><a href="index.html">Home Default</a></li>
-                    <li class="menu-item"><a href="home-modern.html">Home Modern</a></li>
-                    <li class="menu-item"><a href="home-standard.html">Home Standard</a></li>
-                    <li class="menu-item"><a href="home-news.html">Home News</a></li>
-                </ul>
-            </li>
             <li class="menu-item">
                 <a href="about.html">About</a>
             </li>
@@ -55,7 +46,7 @@
                         <div class="row">
                             <div class="col-lg-3 col-12">
                                 <ul class="sub-menu">
-                                    <li class="menu-item"><a href="{% url 'post-format-default.html %}">Single Default</a></li>
+                                    <li class="menu-item"><a href="{% url 'post_format_default' %}">Single Default</a></li>
                                     <li class="menu-item"><a href="post-format-full-width-banner.html">Single Full Width Banner</a></li>
                                 </ul>
                             </div>
